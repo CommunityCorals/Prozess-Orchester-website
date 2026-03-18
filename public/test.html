@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Reiner reCAPTCHA-Test</title>
+    <script src="https://www.google.com/recaptcha/api.js?render=6Ld-OF4rAAAADRr-1tk6h93qylYk2fyECuaBuf9"></script>
+    <script>
+        function runTest() {
+            console.log('Button geklickt. Fordere reCAPTCHA Token an...');
+            grecaptcha.ready(function() {
+                grecaptcha.execute('6Ld-OF4rAAAADRr-1tk6h93qylYk2fyECuaBuf9', {action: 'submit'}).then(function(token) {
+                    console.log('SUCCESS! Token:', token);
+                    alert('TEST ERFOLGREICH! Ein Token wurde in der Konsole ausgegeben.');
+                }).catch(function(error) {
+                    console.error('FEHLER bei grecaptcha.execute:', error);
+                    alert('TEST FEHLGESCHLAGEN. Siehe Konsole für Details.');
+                });
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>Reiner reCAPTCHA-Isolations-Test</h1>
+    <p>Dieser Test umgeht React, Vite und Docker-Build-Prozesse.</p>
+    <button onclick="runTest()" style="font-size: 20px; padding: 10px;">reCAPTCHA Test ausführen</button>
+    <p style="margin-top: 20px;"><b>Anleitung:</b> Klicke auf den Button und öffne danach sofort die Entwickler-Konsole (F12), um das Ergebnis zu sehen.</p>
+</body>
+</html>
