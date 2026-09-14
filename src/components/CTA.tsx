@@ -1,9 +1,9 @@
-
-import { ArrowRight, Calendar, CheckCircle } from "lucide-react";
+import { ArrowRight, Calendar, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
+import { Reveal } from "@/components/Reveal";
 
 export const CTA = () => {
   const { toast } = useToast();
@@ -82,7 +82,7 @@ export const CTA = () => {
           title: "Nachricht gesendet!",
           description: "Vielen Dank für Ihre Anfrage. Wir melden uns in Kürze bei Ihnen.",
         });
-        
+
         // Formular zurücksetzen
         setFormData({
           name: '',
@@ -107,63 +107,70 @@ export const CTA = () => {
     }
   };
 
+  const inputClasses = "w-full px-4 py-3 rounded-lg border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 text-[15px] transition-shadow focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent";
+
   return (
-    <section id="contact-form" className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+    <section id="contact-form" className="py-24 dark-canvas">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center text-white mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <Reveal className="max-w-2xl mb-14">
+          <span className="eyebrow mb-4 !text-blue-400 before:!bg-blue-400">Kontakt</span>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white mb-4">
             Lassen Sie uns Ihre Prozesse orchestrieren
           </h2>
-          <p className="text-xl opacity-90 max-w-3xl mx-auto">
-            Buchen Sie ein unverbindliches Erstgespräch – und finden Sie heraus, wo Automatisierung 
+          <p className="text-lg text-slate-300 leading-relaxed">
+            Buchen Sie ein unverbindliches Erstgespräch – und finden Sie heraus, wo Automatisierung
             für Sie sofort spürbare Entlastung bringt.
           </p>
-        </div>
+        </Reveal>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-6">
-              Was Sie im Erstgespräch erwartet:
-            </h3>
-            <div className="space-y-4">
-              {[
-                "Ehrliche Einschätzung Ihrer aktuellen Prozesse",
-                "Konkrete Verbesserungsvorschläge ohne Technosprech",
-                "Klare Roadmap für die ersten Schritte",
-                "Kein Verkaufsgespräch – nur echte Beratung"
-              ].map((item, index) => (
-                <div key={index} className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-green-300" />
-                  <span className="text-white">{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="bg-white rounded-2xl p-8 shadow-2xl">
-            <div className="text-center mb-6">
-              <Calendar className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                Jetzt Termin vereinbaren
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+          <Reveal>
+            <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-8 md:p-10">
+              <h3 className="text-xl font-semibold tracking-tight text-white mb-7">
+                Was Sie im Erstgespräch erwartet:
               </h3>
-              <p className="text-gray-600">
-                30 Minuten, die Ihr Business entlasten können
-              </p>
+              <div className="space-y-5">
+                {[
+                  "Ehrliche Einschätzung Ihrer aktuellen Prozesse",
+                  "Konkrete Verbesserungsvorschläge ohne Technosprech",
+                  "Klare Roadmap für die ersten Schritte",
+                  "Kein Verkaufsgespräch – nur echte Beratung"
+                ].map((item, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
+                    <span className="text-slate-200 text-[15px] leading-relaxed">{item}</span>
+                  </div>
+                ))}
+              </div>
             </div>
+          </Reveal>
 
-            <form onSubmit={handleSubmit} className="space-y-4">
-              {/* Honeypot-Feld für Spam-Schutz - unsichtbar für normale Nutzer */}
-              <input
-                type="text"
-                name="honeypot"
-                value={formData.honeypot}
-                onChange={handleInputChange}
-                style={{ display: 'none' }}
-                tabIndex={-1}
-                autoComplete="off"
-              />
-              
-              <div>
+          <Reveal delay={100}>
+            <div className="rounded-2xl bg-white p-8 md:p-10 shadow-lift">
+              <div className="mb-7">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 mb-4">
+                  <Calendar className="w-5 h-5 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold tracking-tight text-slate-900 mb-1">
+                  Jetzt Termin vereinbaren
+                </h3>
+                <p className="text-slate-500 text-sm">
+                  30 Minuten, die Ihr Business entlasten können
+                </p>
+              </div>
+
+              <form onSubmit={handleSubmit} className="space-y-3.5">
+                {/* Honeypot-Feld für Spam-Schutz - unsichtbar für normale Nutzer */}
+                <input
+                  type="text"
+                  name="honeypot"
+                  value={formData.honeypot}
+                  onChange={handleInputChange}
+                  style={{ display: 'none' }}
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
+
                 <input
                   type="text"
                   name="name"
@@ -171,10 +178,8 @@ export const CTA = () => {
                   value={formData.name}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className={inputClasses}
                 />
-              </div>
-              <div>
                 <input
                   type="email"
                   name="email"
@@ -182,44 +187,40 @@ export const CTA = () => {
                   value={formData.email}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className={inputClasses}
                 />
-              </div>
-              <div>
                 <input
                   type="text"
                   name="company"
                   placeholder="Unternehmen"
                   value={formData.company}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className={inputClasses}
                 />
-              </div>
-              <div>
                 <textarea
                   name="challenge"
                   placeholder="Beschreiben Sie kurz Ihre größte Prozess-Herausforderung"
                   value={formData.challenge}
                   onChange={handleInputChange}
                   rows={3}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className={inputClasses}
                 ></textarea>
-              </div>
-              
-              <Button 
-                type="submit"
-                disabled={isLoading}
-                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 text-lg"
-              >
-                {isLoading ? 'Wird gesendet...' : 'Jetzt Termin vereinbaren'}
-                {!isLoading && <ArrowRight className="ml-2 w-5 h-5" />}
-              </Button>
-            </form>
 
-            <p className="text-xs text-gray-500 text-center mt-4">
-              Digitalisierung darf einfach sein. Wir respektieren Ihre Privatsphäre.
-            </p>
-          </div>
+                <Button
+                  type="submit"
+                  disabled={isLoading}
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-lg h-12 text-base font-medium shadow-soft"
+                >
+                  {isLoading ? 'Wird gesendet...' : 'Jetzt Termin vereinbaren'}
+                  {!isLoading && <ArrowRight className="ml-2 w-4 h-4" />}
+                </Button>
+              </form>
+
+              <p className="text-xs text-slate-400 text-center mt-5">
+                Digitalisierung darf einfach sein. Wir respektieren Ihre Privatsphäre.
+              </p>
+            </div>
+          </Reveal>
         </div>
       </div>
     </section>

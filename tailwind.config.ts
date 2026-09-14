@@ -18,7 +18,19 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif']
+			},
+			boxShadow: {
+				soft: '0 1px 2px 0 rgb(16 24 40 / 0.06), 0 1px 3px 0 rgb(16 24 40 / 0.10)',
+				lift: '0 12px 32px -12px rgb(16 24 40 / 0.18), 0 2px 6px -2px rgb(16 24 40 / 0.08)'
+			},
 			colors: {
+				brand: {
+					DEFAULT: 'hsl(var(--brand))',
+					violet: 'hsl(var(--brand-violet))'
+				},
+				ink: 'hsl(var(--ink))',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',

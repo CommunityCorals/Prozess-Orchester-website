@@ -1,6 +1,5 @@
-
-import React from "react";
-import { Target, Shield, ChartLine, Handshake, CheckCircle } from "lucide-react";
+import { Target, Shield, ChartLine, Handshake, CheckCircle2 } from "lucide-react";
+import { Reveal } from "@/components/Reveal";
 
 export const ROIGuarantee = () => {
   const missionPoints = [
@@ -27,74 +26,91 @@ export const ROIGuarantee = () => {
   ];
 
   return (
-    <section id="mission" className="py-20 bg-gradient-to-br from-green-50 to-blue-50">
+    <section id="mission" className="py-24 bg-slate-50 border-y border-slate-200/70">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <Reveal className="max-w-2xl mb-16">
+          <span className="eyebrow mb-4">Unser Vorgehen</span>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 mb-4">
             Unsere Mission: 10x Rentabilität für unsere Kunden
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-slate-600 leading-relaxed">
             Wir setzen auf einen transparenten Prozess, der Ihre Investition nicht nur schnell amortisiert, sondern auf einen nachhaltigen, 10-fachen Erfolg ausrichtet.
           </p>
-        </div>
+        </Reveal>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mb-14">
           {missionPoints.map((point, index) => (
-            <div key={index} className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100 text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <point.icon className="w-6 h-6 text-white" />
+            <Reveal key={index} delay={index * 80}>
+              <div className="h-full rounded-2xl border border-slate-200 bg-white p-7 transition-all duration-300 hover:border-emerald-200 hover:shadow-lift">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-50 mb-5">
+                  <point.icon className="w-5 h-5 text-emerald-600" />
+                </div>
+                <h3 className="text-base font-semibold text-slate-900 mb-2.5">
+                  {point.title}
+                </h3>
+                <p className="text-slate-600 leading-relaxed text-sm">
+                  {point.description}
+                </p>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                {point.title}
-              </h3>
-              <p className="text-gray-600 leading-relaxed text-sm">
-                {point.description}
-              </p>
-            </div>
+            </Reveal>
           ))}
         </div>
 
-        <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Wie wir unsere Mission umsetzen
-              </h3>
-              <div className="space-y-3">
-                <div className="flex items-start space-x-3">
-                  <CheckCircle className="w-5 h-5 text-green-500 mt-1" />
-                  <span className="text-gray-700">
-                    <strong>Kostenlose Potenzialanalyse:</strong> Wir analysieren Ihre Prozesse und quantifizieren gemeinsam das Einsparpotenzial.
-                  </span>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <CheckCircle className="w-5 h-5 text-green-500 mt-1" />
-                  <span className="text-gray-700">
-                    <strong>Transparente Erfolgsmessung:</strong> Wir definieren klare Kennzahlen und halten die Fortschritte für Sie nachvollziehbar fest.
-                  </span>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <CheckCircle className="w-5 h-5 text-green-500 mt-1" />
-                  <span className="text-gray-700">
-                    <strong>Kontinuierliche Optimierung:</strong> Wir begleiten Sie auch nach der Umsetzung, um den maximalen Nutzen sicherzustellen.
-                  </span>
+        <Reveal>
+          <div className="rounded-2xl border border-slate-200 bg-white p-8 md:p-12 shadow-soft">
+            <div className="grid lg:grid-cols-2 gap-10 items-center">
+              <div>
+                <h3 className="text-2xl font-bold tracking-tight text-slate-900 mb-6">
+                  Wie wir unsere Mission umsetzen
+                </h3>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-emerald-500 mt-0.5 shrink-0" />
+                    <span className="text-slate-700 text-[15px] leading-relaxed">
+                      <strong className="font-semibold text-slate-900">Kostenlose Potenzialanalyse:</strong> Wir analysieren Ihre Prozesse und quantifizieren gemeinsam das Einsparpotenzial.
+                    </span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-emerald-500 mt-0.5 shrink-0" />
+                    <span className="text-slate-700 text-[15px] leading-relaxed">
+                      <strong className="font-semibold text-slate-900">Transparente Erfolgsmessung:</strong> Wir definieren klare Kennzahlen und halten die Fortschritte für Sie nachvollziehbar fest.
+                    </span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-emerald-500 mt-0.5 shrink-0" />
+                    <span className="text-slate-700 text-[15px] leading-relaxed">
+                      <strong className="font-semibold text-slate-900">Kontinuierliche Optimierung:</strong> Wir begleiten Sie auch nach der Umsetzung, um den maximalen Nutzen sicherzustellen.
+                    </span>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="bg-gradient-to-br from-green-100 to-blue-100 rounded-xl p-8 text-center">
-              <div className="text-4xl font-bold text-green-600 mb-2">10x</div>
-              <div className="text-lg text-gray-700 mb-4">Rentabilitäts-Ziel</div>
-              <div className="bg-white rounded-lg p-4">
-                <div className="text-2xl font-bold text-gray-900 mb-2">Beispielrechnung:</div>
-                <div className="text-sm text-gray-600 space-y-1">
-                  <div><strong>Investment:</strong> 5.000€</div>
-                  <div><strong>Ersparnis:</strong> 50.000€ (10 Jahre)</div>
-                  <div><strong>Amortisation:</strong> Bereits nach ca. 12 Monaten</div>
+
+              <div className="rounded-2xl border border-slate-200 bg-slate-50 p-8">
+                <div className="text-center mb-6">
+                  <div className="text-5xl font-bold tracking-tight text-blue-600 mb-1">10×</div>
+                  <div className="text-sm font-medium text-slate-600">Rentabilitäts-Ziel</div>
+                </div>
+                <div className="rounded-xl border border-slate-200 bg-white p-6">
+                  <div className="text-sm font-semibold text-slate-900 mb-4">Beispielrechnung:</div>
+                  <dl className="space-y-3 text-sm">
+                    <div className="flex items-center justify-between border-b border-slate-100 pb-3">
+                      <dt className="text-slate-500">Investment</dt>
+                      <dd className="font-semibold text-slate-900">5.000 €</dd>
+                    </div>
+                    <div className="flex items-center justify-between border-b border-slate-100 pb-3">
+                      <dt className="text-slate-500">Ersparnis</dt>
+                      <dd className="font-semibold text-slate-900">50.000 € <span className="font-normal text-slate-400">(10 Jahre)</span></dd>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <dt className="text-slate-500">Amortisation</dt>
+                      <dd className="font-semibold text-emerald-600">nach ca. 12 Monaten</dd>
+                    </div>
+                  </dl>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

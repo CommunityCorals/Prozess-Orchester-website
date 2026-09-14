@@ -1,18 +1,23 @@
 import { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown } from "lucide-react";
+import { Reveal } from "@/components/Reveal";
 
 export const FAQ = () => {
   const [openItems, setOpenItems] = useState<number[]>([0]);
 
   const toggleItem = (index: number) => {
-    setOpenItems(prev => 
-      prev.includes(index) 
+    setOpenItems(prev =>
+      prev.includes(index)
         ? prev.filter(i => i !== index)
         : [...prev, index]
     );
   };
 
   const faqs = [
+    {
+      question: "Entwickeln Sie auch individuelle Softwarelösungen?",
+      answer: "Ja. Neben der Automatisierung bestehender Abläufe entwickeln wir interne Anwendungen, Kundenportale und individuelle Schnittstellen. Wir verbinden Ihre vorhandenen Systeme und ergänzen Funktionen, die Ihr Unternehmen braucht. Dabei gilt dieselbe Arbeitsweise: gemeinsam den Bedarf verstehen, den Nutzen klären und die Lösung mit Ihrem Team entwickeln, testen und einführen."
+    },
     {
       question: "Wie läuft ein Automatisierungsprojekt mit euch ab?",
       answer: "Unser Prozess ist darauf ausgelegt, schnell und effizient Ergebnisse zu liefern, ohne Ihre Zeit übermäßig zu beanspruchen. In der Regel ist ein Projekt innerhalb weniger Wochen abgeschlossen und folgt diesen sechs klaren Schritten:\n\n1. Kostenloses Erstgespräch: Wir lernen uns kennen und besprechen Ihre Ziele.\n2. Potenzialanalyse-Workshop: Wir identifizieren gemeinsam die größten Einsparpotenziale.\n3. Angebot & Beauftragung: Sie erhalten ein transparentes Angebot, das auf dem für Sie realisierbaren Wert basiert.\n4. Umsetzung & Testing: Unser Team entwickelt und testet die maßgeschneiderte Automatisierungslösung.\n5. Schulung & Übergabe: Wir stellen sicher, dass Ihr Team die neuen Prozesse versteht und anwenden kann.\n6. Laufender Support: Wir bleiben auch nach dem Projekt an Ihrer Seite."
@@ -40,58 +45,60 @@ export const FAQ = () => {
   ];
 
   return (
-    <section id="faq-section" className="py-20 bg-white">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+    <section id="faq-section" className="py-24 bg-slate-50 border-t border-slate-200/70">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal className="text-center mb-14">
+          <span className="eyebrow mb-4 justify-center">FAQ</span>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 mb-4">
             Häufig gestellte Fragen
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-lg text-slate-600">
             Hier findest du Antworten auf die wichtigsten Fragen zur Zusammenarbeit
           </p>
-        </div>
+        </Reveal>
 
-        <div className="space-y-4">
-          {faqs.map((faq, index) => (
-            <div 
-              key={index}
-              className="bg-gray-50 rounded-xl overflow-hidden"
-            >
-              <button
-                className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-100 transition-colors"
-                onClick={() => toggleItem(index)}
-              >
-                <h3 className="text-lg font-semibold text-gray-900 pr-4">
-                  {faq.question}
-                </h3>
-                {openItems.includes(index) ? (
-                  <ChevronUp className="w-5 h-5 text-gray-500 flex-shrink-0" />
-                ) : (
-                  <ChevronDown className="w-5 h-5 text-gray-500 flex-shrink-0" />
-                )}
-              </button>
-              {openItems.includes(index) && (
-                <div className="px-6 pb-4">
-                  <p className="text-gray-600 leading-relaxed whitespace-pre-line">
-                    {faq.answer}
-                  </p>
+        <Reveal>
+          <div className="rounded-2xl border border-slate-200 bg-white shadow-soft divide-y divide-slate-100 overflow-hidden">
+            {faqs.map((faq, index) => {
+              const isOpen = openItems.includes(index);
+              return (
+                <div key={index}>
+                  <button
+                    className="w-full px-6 md:px-8 py-5 text-left flex justify-between items-center gap-4 hover:bg-slate-50/70 transition-colors"
+                    onClick={() => toggleItem(index)}
+                    aria-expanded={isOpen}
+                  >
+                    <h3 className="text-base font-semibold text-slate-900">
+                      {faq.question}
+                    </h3>
+                    <ChevronDown
+                      className={`w-5 h-5 text-slate-400 shrink-0 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+                    />
+                  </button>
+                  {isOpen && (
+                    <div className="px-6 md:px-8 pb-6">
+                      <p className="text-slate-600 text-[15px] leading-relaxed whitespace-pre-line">
+                        {faq.answer}
+                      </p>
+                    </div>
+                  )}
                 </div>
-              )}
-            </div>
-          ))}
-        </div>
+              );
+            })}
+          </div>
+        </Reveal>
 
-        <div className="mt-12 text-center">
-          <p className="text-gray-600 mb-4">
+        <Reveal className="mt-12 text-center">
+          <p className="text-slate-600 mb-2">
             Noch Fragen? Wir helfen gerne weiter.
           </p>
-          <a 
-            href="mailto:info@prozess-orchester.de" 
-            className="text-blue-600 hover:text-blue-800 font-medium"
+          <a
+            href="mailto:info@prozess-orchester.de"
+            className="text-blue-600 hover:text-blue-700 font-medium"
           >
             info@prozess-orchester.de
           </a>
-        </div>
+        </Reveal>
       </div>
     </section>
   );
