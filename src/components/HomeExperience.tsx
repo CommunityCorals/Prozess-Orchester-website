@@ -33,13 +33,11 @@ export function HomeHero() {
   return <>
     <section className="po-hero" aria-labelledby="hero-heading">
       <div className="po-hero-copy">
-        <p className="po-eyebrow">Automatisierung &amp; KI für den Mittelstand · Individuelle Software</p>
-        <h1 id="hero-heading" className="po-automation-heading">Prozessautomatisierung<br />für KMU.</h1>
-        <p className="po-hero-subtitle">Nicht kompliziert. Sondern konkret.</p>
+        <p className="po-eyebrow">Individuelle Software · Prozessautomatisierung</p>
+        <h1 id="hero-heading">Software, die zu<br className="po-desktop-break" /> Ihrem Unternehmen<br className="po-desktop-break" /> passt.</h1>
         <p className="po-hero-description">Prozess-Orchester hilft Inhabern kleiner und mittlerer Unternehmen, ihre digitalen Geschäftsprozesse mit Automatisierung und KI effizient, schlank und intelligent zu gestalten.</p>
-        <p className="po-hero-description">Dafür entwickeln wir auch individuelle Softwarelösungen und verbinden Ihre bestehenden Systeme.</p>
         <div className="po-actions"><a className="po-button po-button-white" href="#contact-form">Projekt besprechen <ArrowUpRight size={20} /></a><a className="po-text-link" href="#leistungen">Lösungen entdecken <ArrowDown size={18} /></a></div>
-        <div className="po-hero-note">Kostenlose Erstberatung · Fachlich fundiert – aber ohne Fachchinesisch.</div>
+        <div className="po-hero-note">Für Unternehmen, die etwas bewegen wollen.</div>
       </div>
       <div className="po-hero-art"><div className="po-art-label"><span>PROZESS-ORCHESTER</span><span>IM ZUSAMMENSPIEL</span></div><ProcessScore /><div className="po-art-foot"><span>Ein Ablauf. Viele Möglichkeiten.</span><span>↗</span></div></div>
     </section>
@@ -49,7 +47,7 @@ export function HomeHero() {
 
 export function Services() {
   return <section className="po-section po-wrap" id="leistungen">
-    <SectionLabel number="+">Automatisierung, individuelle Software &amp; Schnittstellen</SectionLabel>
+    <SectionLabel number="01">Was wir für Sie entwickeln</SectionLabel>
     <div className="po-section-intro"><h2>Ihre Arbeit gibt<br />den Takt vor.</h2><p>Gewachsene Abläufe verdienen durchdachte Lösungen. Gemeinsam finden wir heraus, was Ihr Team wirklich weiterbringt – und setzen es um.</p></div>
     <div className="po-services">{services.map((s, i) => <article className="po-service-row" id={s.id} key={s.id}><span className="po-row-number">0{i + 1}</span><h3>{s.name}</h3><div><p>{s.text}</p><ul className="po-tags" aria-label="Beispiele">{s.examples.map(e => <li key={e}>{e}</li>)}</ul></div><ArrowUpRight className="po-service-arrow" aria-hidden="true" /></article>)}</div>
   </section>;
@@ -68,7 +66,7 @@ export function ProcessExample() {
   const [active, setActive] = useState(2);
   const step = processSteps[active];
   return <section className="po-example-section" id="einblicke"><div className="po-wrap po-section">
-    <SectionLabel number="↗">Ein Beispiel aus dem Arbeitsalltag</SectionLabel>
+    <SectionLabel number="02">Ein Beispiel aus dem Arbeitsalltag</SectionLabel>
     <div className="po-section-intro"><h2>Von der Anfrage<br />zum Auftrag.<span className="po-purple"> Ohne Umwege.</span></h2><p>Wie wäre es, wenn Informationen nur einmal erfasst werden müssten? Entdecken Sie, was eine passende Lösung an jedem Schritt verändert.</p></div>
     <div className="po-example">
       <div className="po-example-top"><span className="po-example-caption">Anwendungsbeispiel / Angebotsprozess</span><div className="po-mode-switch" role="group" aria-label="Prozess vergleichen"><button aria-pressed={!improved} onClick={() => setImproved(false)}>Heute</button><button aria-pressed={improved} onClick={() => setImproved(true)}>Mit passender Lösung</button></div></div>

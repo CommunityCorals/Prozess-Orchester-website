@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { ArrowUpRight, Menu, X } from 'lucide-react';
 
 const links = [
-  ['Warum jetzt', 'facts'], ['Leistungen', 'leistungen'],
+  ['Leistungen', 'leistungen'], ['Einblicke', 'einblicke'],
   ['Zusammenarbeit', 'zusammenarbeit'], ['Über uns', 'uber-uns'],
 ];
 

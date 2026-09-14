@@ -15,10 +15,6 @@ export const FAQ = () => {
 
   const faqs = [
     {
-      question: "Entwickeln Sie auch individuelle Softwarelösungen?",
-      answer: "Ja. Neben der Automatisierung bestehender Abläufe entwickeln wir interne Anwendungen, Kundenportale und individuelle Schnittstellen. Wir verbinden Ihre vorhandenen Systeme und ergänzen Funktionen, die Ihr Unternehmen braucht. Dabei gilt dieselbe Arbeitsweise: gemeinsam den Bedarf verstehen, den Nutzen klären und die Lösung mit Ihrem Team entwickeln, testen und einführen."
-    },
-    {
       question: "Wie läuft ein Automatisierungsprojekt mit euch ab?",
       answer: "Unser Prozess ist darauf ausgelegt, schnell und effizient Ergebnisse zu liefern, ohne Ihre Zeit übermäßig zu beanspruchen. In der Regel ist ein Projekt innerhalb weniger Wochen abgeschlossen und folgt diesen sechs klaren Schritten:\n\n1. Kostenloses Erstgespräch: Wir lernen uns kennen und besprechen Ihre Ziele.\n2. Potenzialanalyse-Workshop: Wir identifizieren gemeinsam die größten Einsparpotenziale.\n3. Angebot & Beauftragung: Sie erhalten ein transparentes Angebot, das auf dem für Sie realisierbaren Wert basiert.\n4. Umsetzung & Testing: Unser Team entwickelt und testet die maßgeschneiderte Automatisierungslösung.\n5. Schulung & Übergabe: Wir stellen sicher, dass Ihr Team die neuen Prozesse versteht und anwenden kann.\n6. Laufender Support: Wir bleiben auch nach dem Projekt an Ihrer Seite."
     },
