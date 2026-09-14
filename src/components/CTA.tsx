@@ -1,4 +1,4 @@
-import { ArrowRight, Calendar, CheckCircle2 } from "lucide-react";
+import { ArrowRight, MessageSquare, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
@@ -118,8 +118,8 @@ export const CTA = () => {
             Lassen Sie uns Ihre Prozesse orchestrieren
           </h2>
           <p className="text-lg text-slate-300 leading-relaxed">
-            Buchen Sie ein unverbindliches Erstgespräch – und finden Sie heraus, wo Automatisierung
-            für Sie sofort spürbare Entlastung bringt.
+            Beschreiben Sie uns Ihre Idee oder eine Herausforderung aus Ihrem Arbeitsalltag.
+            Wir melden uns bei Ihnen, um gemeinsam die nächsten Schritte zu klären.
           </p>
         </Reveal>
 
@@ -127,14 +127,14 @@ export const CTA = () => {
           <Reveal>
             <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-8 md:p-10">
               <h3 className="text-xl font-semibold tracking-tight text-white mb-7">
-                Was Sie im Erstgespräch erwartet:
+                So beginnt unsere Zusammenarbeit:
               </h3>
               <div className="space-y-5">
                 {[
-                  "Ehrliche Einschätzung Ihrer aktuellen Prozesse",
-                  "Konkrete Verbesserungsvorschläge ohne Technosprech",
-                  "Klare Roadmap für die ersten Schritte",
-                  "Kein Verkaufsgespräch – nur echte Beratung"
+                  "Sie schildern Ihre Idee, Frage oder Herausforderung",
+                  "Wir melden uns persönlich bei Ihnen zurück",
+                  "Gemeinsam klären wir Ihren Bedarf und mögliche nächste Schritte",
+                  "Ihre Kontaktaufnahme ist unverbindlich"
                 ].map((item, index) => (
                   <div key={index} className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
@@ -149,13 +149,13 @@ export const CTA = () => {
             <div className="rounded-2xl bg-white p-8 md:p-10 shadow-lift">
               <div className="mb-7">
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 mb-4">
-                  <Calendar className="w-5 h-5 text-blue-600" />
+                  <MessageSquare className="w-5 h-5 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-semibold tracking-tight text-slate-900 mb-1">
-                  Jetzt Termin vereinbaren
+                  Nehmen Sie Kontakt auf
                 </h3>
                 <p className="text-slate-500 text-sm">
-                  30 Minuten, die Ihr Business entlasten können
+                  Ein paar Sätze reichen für den Anfang.
                 </p>
               </div>
 
@@ -211,7 +211,7 @@ export const CTA = () => {
                   disabled={isLoading}
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-lg h-12 text-base font-medium shadow-soft"
                 >
-                  {isLoading ? 'Wird gesendet...' : 'Jetzt Termin vereinbaren'}
+                  {isLoading ? 'Wird gesendet...' : 'Anfrage senden'}
                   {!isLoading && <ArrowRight className="ml-2 w-4 h-4" />}
                 </Button>
               </form>

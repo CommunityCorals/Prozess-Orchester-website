@@ -194,6 +194,10 @@ html { scroll-padding-top: 95px; }
 .po-footer { color: var(--po-ink); background: white; padding-block: 40px 25px; }
 .po-footer-top { display: flex; justify-content: space-between; align-items: center; gap: 25px; }
 .po-footer-top > p { color: var(--po-muted); font-size: 12px; }
+.po-footer-company { max-width: 560px; margin-top: 24px; color: var(--po-muted); font-size: 14px; line-height: 1.8; }
+.po-footer-company address { display: grid; gap: 5px; margin-top: 20px; font-style: normal; }
+.po-footer-company a { width: fit-content; overflow-wrap: anywhere; }
+.po-footer-company a:hover { color: var(--po-blue); }
 .po-footer-bottom { border-top: 1px solid var(--po-line); margin-top: 32px; padding-top: 22px; display: flex; justify-content: space-between; gap: 25px; color: var(--po-muted); font-size: 10px; }
 .po-footer-bottom nav { display: flex; gap: 25px; }
 .po-footer-bottom a { padding-block: 10px; }

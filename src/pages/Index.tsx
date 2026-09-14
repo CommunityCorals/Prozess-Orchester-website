@@ -1,7 +1,7 @@
 
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 import { HomeHero, Services, ProcessExample, AboutAndApproach, Questions } from '@/components/HomeExperience';
-import { ContactSection } from '@/components/ContactSection';
+import { CTA } from '@/components/CTA';
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 
@@ -20,7 +20,7 @@ const Index = () => {
       <AboutAndApproach />
       <Questions />
       <GoogleReCaptchaProvider reCaptchaKey={RECAPTCHA_SITE_KEY} scriptProps={{ async: true, defer: true }}>
-        <ContactSection />
+        <CTA />
       </GoogleReCaptchaProvider>
       </main>
       <Footer />
