@@ -301,6 +301,13 @@ html { scroll-padding-top: 95px; }
 .po-content-card p { color:var(--po-muted); font-size:14px; line-height:1.85; margin:20px 0; }
 .po-content-card:hover h3 { color:var(--po-blue); }
 .po-card-link { display:flex; align-items:center; gap:15px; margin-top:auto; padding-top:15px; font-size:13px; color:var(--po-blue); font-weight:500; }
+.po-assistance-intro { margin-top:70px; padding-top:38px; border-top:1px solid #bcc8db; }
+.po-assistance-intro h3 { font-size:clamp(25px,2.6vw,35px); line-height:1.25; font-weight:600; letter-spacing:-.035em; }
+.po-assistance-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:55px; margin-top:32px; }
+.po-assistance-grid > div { border-top:2px solid var(--po-blue); padding-top:22px; }
+.po-assistance-grid > div:last-child { border-color:var(--po-violet); }
+.po-assistance-grid h4 { font-size:20px; line-height:1.35; font-weight:600; }
+.po-assistance-grid p { max-width:490px; margin-top:13px; font-size:14px; line-height:1.85; color:var(--po-muted); }
 .po-problem-grid { margin-top:45px; }
 .po-project-card { border-top:0; }
 .po-project-index { display:flex; align-items:center; justify-content:space-between; background:#edf2fc; color:var(--po-blue); padding:25px; font-size:46px; font-family:Manrope, sans-serif; margin-bottom:24px; }
@@ -388,6 +395,8 @@ html { scroll-padding-top: 95px; }
 @media (max-width:760px) {
  .po-page-intro { padding:100px 0 45px; }
  .po-page-intro h1 { font-size:37px; }
+ .po-assistance-intro { margin-top:44px; padding-top:30px; }
+ .po-assistance-grid { grid-template-columns:1fr; gap:28px; margin-top:26px; }
  .po-reading-grid, .po-check-grid, .po-check-details, .po-two-columns, .po-solution-links { grid-template-columns:1fr; gap:32px; }
  .po-price-panel { padding:26px 22px; }
  .po-price-panel .po-button { font-size:13px; }
