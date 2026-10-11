@@ -1,7 +1,7 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 const AGB = () => {
-  return <div className="min-h-screen flex flex-col">
+  return <div className="po-legal min-h-screen flex flex-col">
       <Navigation />
       <main className="flex-1 bg-gradient-to-b from-gray-50 to-white py-16 px-4">
         <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8 md:p-12">

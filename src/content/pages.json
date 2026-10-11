@@ -1,0 +1,686 @@
+[
+  {
+    "slug": "prozessautomatisierung",
+    "kind": "Leistung",
+    "title": "Wiederkehrende Geschäftsprozesse automatisieren.",
+    "lead": "Weniger kopieren, nachfragen und nacharbeiten: Ich automatisiere wiederkehrende Schritte zwischen Ihren vorhandenen Anwendungen. Ausgangspunkt ist der Ablauf, der Ihr Team heute Zeit kostet.",
+    "problem": "Eine E-Mail kommt an. Jemand legt einen Vorgang an, überträgt Daten und informiert die nächste Person. Jeder Schritt ist klein. Zusammen entsteht ein Prozess, der nur weiterläuft, wenn sich jemand darum kümmert.",
+    "steps": [
+      {
+        "title": "Auslösen",
+        "text": "Eine neue Bestellung, eine Schadensmeldung oder ein freigegebenes Dokument startet den Ablauf. Ich lege fest, welches Ereignis zählt und wie wiederholte Meldungen erkannt werden."
+      },
+      {
+        "title": "Bearbeiten",
+        "text": "Daten werden übernommen, zugeordnet und nach Ihren Geschäftsregeln verarbeitet. Berechnungen und feste Entscheidungen bleiben nachvollziehbar."
+      },
+      {
+        "title": "Freigeben",
+        "text": "Preisabweichungen, fehlende Angaben oder fachliche Entscheidungen landen bei der zuständigen Person. Nach der Freigabe setzt der Prozess an der richtigen Stelle fort."
+      },
+      {
+        "title": "Ausnahmen auffangen",
+        "text": "Ein fehlender Datensatz oder ein nicht erreichbares Zielsystem darf keinen Vorgang verschwinden lassen. Fehler erhalten einen nachvollziehbaren Status und einen Weg zur Weiterbearbeitung."
+      },
+      {
+        "title": "Produktiv betreiben",
+        "text": "Ich bringe den Ablauf in Betrieb, dokumentiere die Übergaben und richte passende Fehlermeldungen ein. So sehen Sie, wenn ein Vorgang Aufmerksamkeit braucht."
+      }
+    ],
+    "result": [
+      "Informationen einmal erfassen und an die benötigten Stellen weitergeben.",
+      "Wiederkehrende Vorgänge nach vereinbarten Regeln anstoßen.",
+      "Freigaben und Ausnahmefälle gezielt bei den zuständigen Personen belassen."
+    ],
+    "requirements": "Für die Umsetzung brauche ich konkrete Vorgänge, die geltenden Regeln und Zugang zu den beteiligten Systemen. Wir beginnen mit dem Ablauf, dessen wiederkehrende Handarbeit den größten Engpass verursacht.",
+    "cost": "Im Projektangebot stehen die enthaltenen Abläufe, Schnittstellen, Freigaben und Betriebsleistungen. Zusätzliche Varianten sind sichtbar abgegrenzt.",
+    "faq": [
+      {
+        "q": "Braucht jede Automatisierung KI?",
+        "a": "Nein. Feste Regeln, Berechnungen und Datenübertragungen lassen sich häufig ohne KI umsetzen. KI kommt dort infrage, wo Texte oder Dokumente eingeordnet werden müssen."
+      },
+      {
+        "q": "Müssen wir vorhandene Software ersetzen?",
+        "a": "Ich verbinde oder ergänze die vorhandenen Programme über ihre Schnittstellen und geeignete Import- oder Exportwege. Ein Systemwechsel ist nur dann Teil des Vorschlags, wenn der Ablauf ihn wirklich braucht."
+      },
+      {
+        "q": "Was passiert bei Fehlern?",
+        "a": "Fehlerbehandlung und Zuständigkeiten gehören zur Projektklärung. Welche Meldungen, Wiederholungen oder manuellen Bearbeitungsschritte nötig sind, hängt vom konkreten Prozess ab."
+      }
+    ],
+    "related": [
+      "email-automatisieren",
+      "rechnungsverarbeitung-automatisieren",
+      "schnittstellen-api"
+    ],
+    "project": "versandkostenabgleich",
+    "problemTitle": "Der Vorgang wartet auf den nächsten Handgriff.",
+    "detailTitle": "Ein Auslöser. Ein Ablauf. Klare Zuständigkeiten.",
+    "detailStyle": "flow",
+    "cardTitle": "Geschäftsprozesse automatisieren.",
+    "cardText": "Wiederkehrende Aufgaben übernehmen, Vorgänge weitergeben und Ausnahmen gezielt bearbeiten."
+  },
+  {
+    "slug": "individualsoftware-kmu",
+    "kind": "Leistung",
+    "title": "Individuelle Software für Ihre Arbeitsabläufe.",
+    "lead": "Wenn Tabellen, Vorlagen und Standardprogramme Ihren Ablauf nur mit Umwegen abbilden, entwickle ich die passende Anwendung. Für die Menschen, die täglich damit arbeiten.",
+    "problem": "Ihr Team pflegt eigene Listen, kopiert Werte in Vorlagen und stimmt sich per E-Mail ab. Die vorhandene Software deckt einzelne Aufgaben ab, aber der eigentliche Arbeitsablauf findet dazwischen statt.",
+    "steps": [
+      {
+        "title": "Eingaben und Bedienung",
+        "text": "Eine Maske zeigt die Angaben, die für den jeweiligen Arbeitsschritt gebraucht werden. Pflichtangaben, Auswahlfelder und verständliche Rückmeldungen führen durch den Vorgang – am Schreibtisch oder auf dem Tablet."
+      },
+      {
+        "title": "Kalkulation und Geschäftsregeln",
+        "text": "Leistungen, Preise, Zusatzpositionen und Berechnungen werden in der Anwendung abgebildet. Die Regeln kommen aus Ihrem Geschäft und sind Teil der gemeinsamen Abnahme."
+      },
+      {
+        "title": "Rollen und Freigaben",
+        "text": "Wer darf Stammdaten pflegen, ein Angebot ändern oder einen Vorgang freigeben? Ich übersetze diese Verantwortlichkeiten in passende Funktionen und Zugriffe."
+      },
+      {
+        "title": "Dokumente und vorhandene Daten",
+        "text": "Angebote, Rechnungen und Auswertungen entstehen aus den erfassten Angaben. Vorhandene Systeme werden über geeignete Schnittstellen oder Datenimporte angebunden."
+      }
+    ],
+    "result": [
+      "Ein zusammenhängender Arbeitsablauf statt verteilter Tabellen und Vorlagen.",
+      "Eingaben, Berechnungen und Dokumente passend zu Ihren Regeln.",
+      "Anwendungen für Büro, Tablet oder andere vereinbarte Nutzungssituationen."
+    ],
+    "requirements": "Eine individuelle Anwendung ist besonders dann sinnvoll, wenn Ihr Ablauf eigene Regeln, mehrere Nutzer oder eine passende Oberfläche braucht. Ich wähle die einfachste Lösung, die diese Anforderungen zuverlässig erfüllt.",
+    "cost": "Sie erhalten einen Vorschlag für den ersten nutzbaren Umfang: Funktionen, Datenübernahme, Anbindungen und Kosten. Weitere Module können darauf aufbauen.",
+    "faq": [
+      {
+        "q": "Können Sie auch eine vorhandene Excel-Lösung ablösen?",
+        "a": "Ja. Zuerst werden Formeln, Daten und tatsächliche Arbeitswege aufgenommen. Daraus ergibt sich, welche Funktionen übernommen oder vereinfacht werden sollten."
+      },
+      {
+        "q": "Ist eine Nutzung auf dem Tablet möglich?",
+        "a": "Ja, wenn sie zum Arbeitsablauf gehört. Bei der Angebotssoftware für ein Generalunternehmen ist die Oberfläche für die Bedienung am Tablet ausgelegt."
+      },
+      {
+        "q": "Wer kümmert sich später um die Software?",
+        "a": "Ich dokumentiere die Anwendung und übergebe die erforderlichen Zugänge. Auf Wunsch übernehme ich die laufende Pflege und Weiterentwicklung. Den passenden Betriebsumfang erhalten Sie mit dem Projektangebot."
+      }
+    ],
+    "related": [
+      "angebotserstellung-automatisieren",
+      "excel-prozesse-automatisieren",
+      "schnittstellen-api"
+    ],
+    "project": "angebotssoftware",
+    "problemTitle": "Wenn Ihr Team den eigentlichen Prozess neben der Software organisiert.",
+    "detailTitle": "Die Anwendung folgt der Arbeit Ihrer Nutzer.",
+    "detailStyle": "modules",
+    "cardTitle": "Individuelle Software entwickeln.",
+    "cardText": "Anwendungen für Ihre Eingaben, Berechnungen und Freigaben – passend zur täglichen Arbeit."
+  },
+  {
+    "slug": "schnittstellen-api",
+    "kind": "Leistung",
+    "title": "Ihre Systeme verbinden. Daten automatisch weitergeben.",
+    "lead": "Shop, Warenwirtschaft, Versand oder Buchhaltung: Ich entwickle Anbindungen, mit denen vorhandene Anwendungen Informationen austauschen. Ohne wiederholtes Abtippen.",
+    "problem": "Dieselben Daten existieren in mehreren Programmen. Ein Export wird heruntergeladen, eine Tabelle angepasst und anschließend wieder importiert. Sobald ein Format oder eine Zuordnung nicht stimmt, beginnt die Nacharbeit.",
+    "steps": [
+      {
+        "title": "REST API und Authentifizierung",
+        "text": "Ich binde die verfügbaren API-Endpunkte an und richte den dafür vorgesehenen Zugriff ein, etwa per API-Schlüssel oder OAuth. Berechtigungen werden auf die benötigten Daten und Aktionen begrenzt."
+      },
+      {
+        "title": "Webhooks oder Polling",
+        "text": "Ein Webhook meldet ein Ereignis direkt an die Integration. Wenn das Quellsystem keine passende Ereignismeldung bietet, werden Änderungen regelmäßig abgefragt. Das Intervall richtet sich nach Aktualitätsbedarf und API-Limits."
+      },
+      {
+        "title": "Datenzuordnung",
+        "text": "Kundennummern, Artikel-IDs und Auftragsreferenzen verbinden die Datensätze. Feldnamen, Formate und Pflichtangaben werden für das Zielsystem übersetzt."
+      },
+      {
+        "title": "Einseitig oder bidirektional",
+        "text": "Bei einer bidirektionalen Synchronisation muss pro Feld feststehen, welche Quelle führt. Regeln für Konflikte und Rückmeldungen verhindern, dass sich Änderungen zwischen Systemen im Kreis bewegen."
+      },
+      {
+        "title": "Wiederholungen und Monitoring",
+        "text": "Die Integration berücksichtigt Zeitüberschreitungen, Mengenbegrenzungen und wiederholte Ereignisse. Übertragungsstatus und Fehler werden nachvollziehbar, damit Daten nicht unbemerkt fehlen oder doppelt entstehen."
+      }
+    ],
+    "result": [
+      "Daten zwischen vorhandenen Anwendungen weitergeben.",
+      "Manuelle Exporte und wiederkehrende Übertragungen reduzieren.",
+      "Klare Zuordnungen und nachvollziehbare Übergaben schaffen."
+    ],
+    "requirements": "ERP, Shop und CRM müssen die benötigten Informationen bereitstellen können. Ich prüfe die konkrete API und ihre Zugriffsbedingungen. Wo eine API fehlt, kann ein strukturierter Import oder Export der passende Weg sein.",
+    "cost": "Der Preis hängt von Datenobjekten, Übertragungsrichtungen, vorhandener Dokumentation und Fehlerlogik ab. Sie erhalten einen klar beschriebenen Integrationsumfang einschließlich Test und Einführung.",
+    "faq": [
+      {
+        "q": "Können auch ältere Systeme angebunden werden?",
+        "a": "Das hängt von ihren Zugriffs- und Exportmöglichkeiten ab. Wir prüfen den konkreten Datenweg, bevor eine Integration zugesagt wird."
+      },
+      {
+        "q": "Werden alle Daten in Echtzeit synchronisiert?",
+        "a": "Nur wenn es benötigt wird und technisch möglich ist. Für viele Abläufe ist eine regelmäßige Übertragung ausreichend."
+      },
+      {
+        "q": "Was geschieht bei einer Änderung der Anbieter-API?",
+        "a": "Anpassungen können erforderlich werden. Überwachung und Wartung werden deshalb als Teil des Betriebs besprochen."
+      }
+    ],
+    "related": [
+      "versandprozesse-automatisieren",
+      "crm-automatisieren",
+      "reporting-automatisieren"
+    ],
+    "project": "handelsprozesse",
+    "problemTitle": "Zwischen Shop, ERP und CRM wird noch von Hand übertragen.",
+    "detailTitle": "So entsteht ein belastbarer Datenaustausch.",
+    "detailStyle": "matrix",
+    "cardTitle": "Systeme verbinden.",
+    "cardText": "Daten zwischen vorhandenen Anwendungen übertragen, statt sie mehrfach einzugeben."
+  },
+  {
+    "slug": "angebotserstellung-automatisieren",
+    "kind": "Lösung",
+    "title": "Angebote aus Ihren Leistungen und Preisen erstellen.",
+    "lead": "Vom strukturierten Leistungskatalog bis zum versandfertigen PDF: Ich verbinde Auswahl, Kalkulation und Angebotserstellung in einem geführten Ablauf.",
+    "problem": "Ein neues Angebot beginnt mit einer alten Datei. Preise werden gesucht, Positionen kopiert und Zusatzleistungen ergänzt. Anschließend müssen Darstellung, Kundenangaben und Versand wieder von Hand vorbereitet werden.",
+    "steps": [
+      {
+        "title": "Leistungen und Preise auswählen",
+        "text": "Ein gepflegter Katalog enthält Leistungen, Preise und optionale Zusatzpositionen. Die Auswahl ersetzt das erneute Zusammensuchen für jedes Angebot."
+      },
+      {
+        "title": "Kalkulation im Vorgang bearbeiten",
+        "text": "Kundenangaben und Positionen werden im geführten Ablauf zusammengestellt und kalkuliert. Individuelle Angaben bleiben direkt am Angebot."
+      },
+      {
+        "title": "PDF automatisch erzeugen",
+        "text": "Die Anwendung erstellt das Angebotsdokument aus den erfassten Daten. Inhalt und Darstellung stammen aus derselben Grundlage wie die Kalkulation."
+      },
+      {
+        "title": "Direkt versenden und Status verfolgen",
+        "text": "Das Angebot wird per E-Mail versendet. Kunden, Angebotsstatus und Bearbeitungsschritte bleiben in derselben Anwendung verfügbar."
+      }
+    ],
+    "result": [
+      "Leistungen und Zusatzpositionen strukturiert auswählen.",
+      "Angebote aus einer gemeinsamen Preis- und Datenbasis zusammenstellen.",
+      "PDF-Erstellung und Versand in den Arbeitsablauf integrieren."
+    ],
+    "requirements": "Die entwickelte Lösung für ein Generalunternehmen zeigt diesen Ablauf bereits in einer tabletoptimierten Anwendung. Für Ihr Unternehmen übernehme ich die passenden Leistungen, Kalkulationsregeln und Dokumentvorlagen.",
+    "cost": "Ein Projektangebot beschreibt Katalogpflege, Kalkulation, Dokumente, Nutzerrollen und erforderliche Schnittstellen. Damit sehen Sie, welche Funktionen im ersten Schritt entstehen.",
+    "faq": [
+      {
+        "q": "Gibt es dafür bereits ein Projektbeispiel?",
+        "a": "Ja. Eine entwickelte Angebotssoftware für ein Generalunternehmen verbindet Leistungskatalog, geführte Erstellung, PDF-Ausgabe, E-Mail-Versand und Angebotsverwaltung."
+      },
+      {
+        "q": "Müssen alle Angebote identisch aufgebaut sein?",
+        "a": "Nein. Welche Varianten, Zusatzpositionen und individuellen Angaben vorgesehen werden, klären wir anhand Ihrer tatsächlichen Angebote."
+      },
+      {
+        "q": "Kann unser bestehendes Layout verwendet werden?",
+        "a": "Ja. Ich übernehme Ihr Layout und die von Ihnen benötigten Angaben in die PDF-Vorlage. Das fertige Dokument wird gemeinsam mit der Kalkulation geprüft."
+      }
+    ],
+    "related": [
+      "individualsoftware-kmu",
+      "excel-prozesse-automatisieren",
+      "schnittstellen-api"
+    ],
+    "project": "angebotssoftware",
+    "problemTitle": "Ein Angebot entsteht heute in mehreren Werkzeugen.",
+    "detailTitle": "Vom Leistungskatalog bis zum versendeten PDF.",
+    "detailStyle": "flow",
+    "cardTitle": "Angebote aus Ihren Leistungen und Preisen erstellen.",
+    "cardText": "Vom strukturierten Leistungskatalog bis zum versandfertigen PDF: Ich verbinde Auswahl, Kalkulation und Angebotserstellung in einem geführten Ablauf."
+  },
+  {
+    "slug": "rechnungsverarbeitung-automatisieren",
+    "kind": "Lösung",
+    "title": "Rechnungen erfassen, prüfen und weitergeben.",
+    "lead": "Rechnungsdokumente strukturiert ablegen, Angaben auslesen und für die Buchhaltung vorbereiten. Mit klaren Prüfwegen für fehlende oder unplausible Informationen.",
+    "problem": "Rechnungen kommen über verschiedene Postfächer und Portale. Dateien werden umbenannt, abgelegt und Werte erneut eingegeben. Fehlende Zuordnungen und unklare Belege unterbrechen die Bearbeitung.",
+    "steps": [
+      {
+        "title": "E-Mail-Eingang und Ablage",
+        "text": "Rechnungen werden aus dem vorgesehenen Eingang übernommen und einem Vorgang zugeordnet. Doppelte Dokumente und fehlende Anhänge erhalten einen eigenen Bearbeitungsweg."
+      },
+      {
+        "title": "PDF, Scan oder XRechnung",
+        "text": "Eine XRechnung liefert strukturierte XML-Daten. Bei PDF-Dateien hängt die Verarbeitung davon ab, ob auslesbarer Text oder ein Scan vorliegt. OCR und KI unterstützen dort, wo Informationen erst aus dem Dokument gewonnen werden müssen."
+      },
+      {
+        "title": "Lieferant und Beleg zuordnen",
+        "text": "Rechnungsnummer, Lieferant, Beträge und weitere benötigte Angaben werden mit vorhandenen Stammdaten oder Vorgängen abgeglichen. Fehlende Zuordnungen werden sichtbar zur Bearbeitung bereitgestellt."
+      },
+      {
+        "title": "Prüfen und freigeben",
+        "text": "Beträge, Pflichtangaben und Zuordnungen werden nach Ihren Regeln kontrolliert. Unklare Ausleseergebnisse und fachliche Freigaben bleiben bei den verantwortlichen Personen."
+      },
+      {
+        "title": "An die Buchhaltung übergeben",
+        "text": "Freigegebene Dokumente und Daten gehen über den verfügbaren Import- oder API-Weg an Ihre Buchhaltungssoftware. Eine DATEV-Anbindung ist eine mögliche Zielintegration; den konkreten Dienst, Zugang und Übertragungsumfang prüfe ich vor einer Zusage."
+      }
+    ],
+    "result": [
+      "Wiederkehrende Ablage- und Erfassungsschritte reduzieren.",
+      "Rechnungsinformationen für die weitere Verarbeitung strukturieren.",
+      "Unklare Dokumente gezielt zur Prüfung bereitstellen."
+    ],
+    "requirements": "Automatische Rechnungsablage und KI-gestütztes Auslesen von Rechnungsdokumenten gehören zu meinen umgesetzten Aufgaben. Eine neue Lösung wird mit Ihren Belegarten und Buchhaltungsanforderungen getestet. Die sachliche Rechnungsprüfung bleibt ein eigener Schritt.",
+    "cost": "Dokumentvarianten, Zuordnungen, Freigaben und das Zielsystem bestimmen den Aufwand. Das Angebot trennt einmalige Umsetzung und laufende Kosten für verwendete Dienste.",
+    "faq": [
+      {
+        "q": "Ist das eine automatische Buchungsfreigabe?",
+        "a": "Auslesen und Freigeben sind getrennte Schritte. Ich bereite die Daten auf; Ihre fachlichen Regeln bestimmen, welche Angaben geprüft werden und wer den Beleg freigibt."
+      },
+      {
+        "q": "Brauchen strukturierte Rechnungen KI?",
+        "a": "Für bereits strukturierte Daten ist häufig keine KI erforderlich. Die Verarbeitung wird dem tatsächlichen Format angepasst."
+      },
+      {
+        "q": "Welche Erfahrung liegt vor?",
+        "a": "Zu den umgesetzten Aufgaben gehören automatische Rechnungsablage und KI-gestütztes Auslesen von Rechnungsdokumenten für Buchhaltungsabläufe."
+      }
+    ],
+    "related": [
+      "ki-automatisierung",
+      "prozessautomatisierung",
+      "schnittstellen-api"
+    ],
+    "project": "",
+    "problemTitle": "Die Rechnung ist da. Die Daten fehlen noch in der Buchhaltung.",
+    "detailTitle": "Vom E-Mail-Anhang zur geprüften Übergabe.",
+    "detailStyle": "flow",
+    "cardTitle": "Rechnungen erfassen, prüfen und weitergeben.",
+    "cardText": "Rechnungsdokumente strukturiert ablegen, Angaben auslesen und für die Buchhaltung vorbereiten. Mit klaren Prüfwegen für fehlende oder unplausible Informationen."
+  },
+  {
+    "slug": "versandprozesse-automatisieren",
+    "kind": "Lösung",
+    "title": "Versand planen, buchen und Kosten abgleichen.",
+    "lead": "Bestelldaten, Liefertermine, Versandbuchung und Abrechnung gehören zusammen. Ich entwickle Anwendungen und Schnittstellen für die Übergaben dazwischen.",
+    "problem": "Bestellungen stehen im Shop, Liefertermine in einer Liste und Versanddaten beim Dienstleister. Später kommt eine Rechnung mit Zuschlägen, die einzeln mit den ursprünglichen Sendungen verglichen werden muss.",
+    "steps": [
+      {
+        "title": "Liefertermine planen",
+        "text": "Bestellungen und gewünschte Liefertermine bilden die Grundlage der Versandplanung. Eine passende Oberfläche macht die anstehenden Sendungen gemeinsam bearbeitbar."
+      },
+      {
+        "title": "Beim Dienstleister buchen",
+        "text": "Versandangaben werden über die verfügbare Anbindung übergeben. Fehlende Adress- oder Sendungsdaten werden vor der Buchung behandelt."
+      },
+      {
+        "title": "Rechnungen Sendungen zuordnen",
+        "text": "Sendungsreferenzen verbinden die Abrechnung des Dienstleisters mit den ursprünglichen Versanddaten. Erst diese Zuordnung macht Zuschläge prüfbar."
+      },
+      {
+        "title": "Gewichtsüberschreitungen nachberechnen",
+        "text": "Der Abgleich verarbeitet abgerechnete Gewichte und die vorhandenen Sendungsdaten als Grundlage der Nachberechnung. Ihre Tarif- und Freigaberegeln bestimmen die weitere Bearbeitung."
+      }
+    ],
+    "result": [
+      "Planung und Versandbuchung auf denselben Bestelldaten aufbauen.",
+      "Sendungen und abgerechnete Leistungen zusammenbringen.",
+      "Gewichtsabweichungen für die Nachberechnung nutzbar machen."
+    ],
+    "requirements": "Versandplanung, Versandbuchung und der Abgleich von Versandrechnungen sind vorhandene Praxisfelder. Für eine neue Anbindung brauche ich Versanddaten, Beispielabrechnungen und die Regeln Ihrer Dienstleister.",
+    "cost": "Planung, Buchung und Rechnungsabgleich lassen sich als einzelne Module oder als zusammenhängendes Projekt umsetzen. Dienstleister, Tarifvarianten und Schnittstellen werden im Angebot konkret benannt.",
+    "faq": [
+      {
+        "q": "Gibt es dafür praktische Erfahrung?",
+        "a": "Ja. Zu den beschriebenen Anwendungen gehören ein Versandplanungsmodul mit Lieferterminplanung und Versandbuchung sowie der Abgleich von Versandrechnungen zur Nachberechnung von Gewichtsüberschreitungen."
+      },
+      {
+        "q": "Können mehrere Dienstleister angebunden werden?",
+        "a": "Das ist grundsätzlich ein möglicher Umfang. Verfügbare Schnittstellen und Vertragsbedingungen müssen für jeden Dienstleister geprüft werden."
+      },
+      {
+        "q": "Werden Zuschläge automatisch an Kunden berechnet?",
+        "a": "Das hängt von Ihren Regeln und dem gewünschten Freigabeprozess ab. Eine pauschale Weiterberechnung ohne fachliche Grundlage wird nicht vorausgesetzt."
+      }
+    ],
+    "related": [
+      "schnittstellen-api",
+      "individualsoftware-kmu",
+      "reporting-automatisieren"
+    ],
+    "project": "versandkostenabgleich",
+    "problemTitle": "Die Bestellung ist digital. Der Versand hängt an Listen.",
+    "detailTitle": "Planung, Buchung und Abrechnung verbinden.",
+    "detailStyle": "modules",
+    "cardTitle": "Versand planen, buchen und Kosten abgleichen.",
+    "cardText": "Bestelldaten, Liefertermine, Versandbuchung und Abrechnung gehören zusammen. Ich entwickle Anwendungen und Schnittstellen für die Übergaben dazwischen."
+  },
+  {
+    "slug": "excel-prozesse-automatisieren",
+    "kind": "Lösung",
+    "title": "Wenn Excel Ihren Prozess zusammenhalten muss.",
+    "lead": "Wiederkehrende Tabellenarbeit lässt sich gezielt vereinfachen. Ich verbinde Datenquellen, automatisiere Übertragungen oder entwickle eine Anwendung für den Ablauf hinter der Tabelle.",
+    "problem": "Eine wichtige Datei liegt in mehreren Versionen vor. Formeln, Kommentare und farbige Zellen enthalten Regeln, die nur einzelne Personen kennen. Andere Systeme liefern Daten, die regelmäßig hineinkopiert werden.",
+    "steps": [
+      {
+        "title": "Datenimporte",
+        "text": "Wiederkehrende Exporte werden nach festen Regeln eingelesen und zusammengeführt. Formate und Spaltenzuordnungen werden einmal sauber definiert."
+      },
+      {
+        "title": "Formeln und Berechnungen",
+        "text": "Geschäftliche Berechnungen werden anhand echter Beispiele nachvollzogen. Danach lassen sie sich in der Tabelle vereinfachen oder in eine Anwendung übertragen."
+      },
+      {
+        "title": "Versionen und gemeinsame Bearbeitung",
+        "text": "Wenn mehrere Dateien denselben Vorgang abbilden, entsteht Abstimmungsarbeit. Eine gemeinsame Datenbasis kann diese Versionen zusammenführen und Zuständigkeiten sichtbar machen."
+      },
+      {
+        "title": "Ablösung durch eine Anwendung",
+        "text": "Braucht der Prozess Rollen, Freigaben und geführte Eingaben, entwickle ich dafür eine passende Oberfläche. Excel kann weiterhin als Exportformat zur Verfügung stehen."
+      }
+    ],
+    "result": [
+      "Wiederholtes Kopieren und Zusammenführen reduzieren.",
+      "Geschäftsregeln nachvollziehbar abbilden.",
+      "Den Arbeitsablauf weniger abhängig von einzelnen Dateien machen."
+    ],
+    "requirements": "Entscheidend sind die tatsächlich genutzten Dateien, Formeln und manuellen Eingriffe. Ich übernehme die fachlichen Regeln und vergleiche die Ergebnisse mit repräsentativen Vorgängen.",
+    "cost": "Im Angebot steht, ob die Tabelle ergänzt oder der dahinterliegende Ablauf als Anwendung umgesetzt wird. Datenübernahme, Berechnungen und Ausgabeformate sind Teil dieses Umfangs.",
+    "faq": [
+      {
+        "q": "Kann Excel weiterhin verwendet werden?",
+        "a": "Ja. Oft ist es sinnvoll, Daten automatisch bereitzustellen oder Ergebnisse weiterhin exportierbar zu machen."
+      },
+      {
+        "q": "Werden alle bestehenden Formeln übernommen?",
+        "a": "Nur nach fachlicher Prüfung. Manche Regeln werden übernommen, andere vereinfacht oder durch eine passendere Verarbeitung ersetzt."
+      }
+    ],
+    "related": [
+      "individualsoftware-kmu",
+      "reporting-automatisieren",
+      "schnittstellen-api"
+    ],
+    "project": "angebotssoftware",
+    "problemTitle": "Die wichtigste Geschäftsregel steckt in einer Tabellenzelle.",
+    "detailTitle": "Excel ergänzen oder den Ablauf in eine Anwendung bringen.",
+    "detailStyle": "matrix",
+    "cardTitle": "Wenn Excel Ihren Prozess zusammenhalten muss.",
+    "cardText": "Wiederkehrende Tabellenarbeit lässt sich gezielt vereinfachen. Ich verbinde Datenquellen, automatisiere Übertragungen oder entwickle eine Anwendung für den Ablauf hinter der Tabelle."
+  },
+  {
+    "slug": "email-automatisieren",
+    "kind": "Lösung",
+    "title": "Aus eingehenden E-Mails werden bearbeitbare Vorgänge.",
+    "lead": "Anfragen einordnen, Informationen übernehmen und den nächsten Schritt vorbereiten. Damit Ihr Postfach nicht die einzige Stelle bleibt, an der ein Prozess gesteuert wird.",
+    "problem": "Eine Nachricht enthält alle Angaben für einen neuen Vorgang. Trotzdem muss jemand den Inhalt lesen, Anhänge ablegen, ein Projekt anlegen und die zuständige Person informieren.",
+    "steps": [
+      {
+        "title": "Nachrichtentyp erkennen",
+        "text": "Schadensmeldung, Kundenanfrage oder Dokumenteingang: Der Ablauf beginnt mit einer klaren Auswahl geeigneter Nachrichten."
+      },
+      {
+        "title": "Angaben und Anhänge übernehmen",
+        "text": "Benötigte Felder werden aus der Nachricht und ihren Dokumenten gewonnen. Freitext kann mit KI eingeordnet werden; fehlende Angaben bleiben als fehlend erkennbar."
+      },
+      {
+        "title": "Projekt oder Ticket anlegen",
+        "text": "Die Informationen werden dem passenden Vorgang und Kunden zugeordnet. Ein Zielsystem erhält die Daten über seine Schnittstelle oder einen geeigneten Import."
+      },
+      {
+        "title": "Zuständigkeit und nächste Aktion setzen",
+        "text": "Die verantwortliche Person erhält den Vorgang mit den vorhandenen Angaben. Antwortentwürfe oder weitere Aktionen folgen den vereinbarten Freigaberegeln."
+      }
+    ],
+    "result": [
+      "Wiederkehrende Eingangsbearbeitung vereinfachen.",
+      "Informationen aus Nachrichten in bearbeitbare Vorgänge überführen.",
+      "Manuelles Weiterleiten und erneutes Erfassen reduzieren."
+    ],
+    "requirements": "Die automatische Projektanlage auf Basis von Schadensmeldungen ist ein bereits umgesetzter Anwendungsfall. Für neue Abläufe werden Nachrichtentypen, Zugriffsrechte und die erforderlichen Angaben festgelegt.",
+    "cost": "Anzahl der Nachrichtentypen, Dokumente, Zielsysteme und Freigaben bestimmen den Umfang. Das erste Projekt kann sich auf einen häufigen, klar erkennbaren Nachrichtentyp konzentrieren.",
+    "faq": [
+      {
+        "q": "Gibt es einen bereits umgesetzten Anwendungsfall?",
+        "a": "Ja. Die automatische Projektanlage auf Basis von Schadensmeldungen gehört zu den beschriebenen Automatisierungslösungen."
+      },
+      {
+        "q": "Werden Antworten ohne Kontrolle versendet?",
+        "a": "Nur wenn dies ausdrücklich zum vereinbarten Ablauf passt. Für individuelle oder kritische Antworten ist ein Entwurf mit Freigabe oft der sinnvollere Weg."
+      }
+    ],
+    "related": [
+      "prozessautomatisierung",
+      "ki-automatisierung",
+      "crm-automatisieren"
+    ],
+    "project": "",
+    "problemTitle": "Eine Nachricht kommt an. Der Vorgang muss noch angelegt werden.",
+    "detailTitle": "Aus dem Postfach in die Bearbeitung.",
+    "detailStyle": "flow",
+    "cardTitle": "Aus eingehenden E-Mails werden bearbeitbare Vorgänge.",
+    "cardText": "Anfragen einordnen, Informationen übernehmen und den nächsten Schritt vorbereiten. Damit Ihr Postfach nicht die einzige Stelle bleibt, an der ein Prozess gesteuert wird."
+  },
+  {
+    "slug": "reporting-automatisieren",
+    "kind": "Lösung",
+    "title": "Berichte erstellen, ohne jeden Monat Daten zu kopieren.",
+    "lead": "Ich verbinde Datenquellen und wiederkehrende Auswertungen. Damit Ihr Team Zahlen prüfen und nutzen kann, statt sie regelmäßig neu zusammenzustellen.",
+    "problem": "Der Monatsbericht beginnt mit mehreren Exporten. Spalten werden umbenannt, Werte zusammengeführt und dieselben Diagramme aktualisiert. Unterschiedliche Stichtage erschweren den Vergleich.",
+    "steps": [
+      {
+        "title": "Datenquellen",
+        "text": "Ich führe benötigte Informationen aus verfügbaren APIs oder Exporten zusammen. Die Herkunft bleibt nachvollziehbar."
+      },
+      {
+        "title": "Kennzahlendefinitionen",
+        "text": "Umsatz, offene Aufträge oder Versandkosten müssen im Bericht dieselbe Bedeutung haben wie in Ihrem Geschäft. Zeitraum, Berechnung und fachliche Verantwortung werden klar festgelegt."
+      },
+      {
+        "title": "Aktualisierung",
+        "text": "Berichte werden zum passenden Zeitpunkt aktualisiert. Der Datenstand zeigt, welche Informationen bereits eingeflossen sind."
+      },
+      {
+        "title": "Fehlende Daten",
+        "text": "Ein ausgebliebener Import oder eine fehlende Zuordnung soll nicht wie eine echte Null aussehen. Die Auswertung macht solche Lücken kenntlich."
+      },
+      {
+        "title": "Ausgabe",
+        "text": "Dashboard, Tabelle oder wiederkehrender Bericht: Ich wähle die Ausgabe passend zu den Fragen und Arbeitsweisen der Empfänger."
+      }
+    ],
+    "result": [
+      "Wiederkehrende Aufbereitungsschritte reduzieren.",
+      "Kennzahlen aus einer nachvollziehbaren Grundlage erzeugen.",
+      "Abweichungen und fehlende Daten leichter erkennen."
+    ],
+    "requirements": "Für belastbare Auswertungen müssen Quellen, Zeiträume und Kennzahlendefinitionen zusammenpassen. Wir legen diese Grundlage fest, bevor der Bericht automatisiert wird.",
+    "cost": "Datenquellen, Historie, Berechnungen und Ausgabeformate bestimmen den Aufwand. Im Projektvorschlag stehen die enthaltenen Kennzahlen und Aktualisierungen.",
+    "faq": [
+      {
+        "q": "Brauchen wir dafür ein neues Dashboard?",
+        "a": "Nicht zwingend. Ein regelmäßig erzeugter Bericht oder eine automatisch aktualisierte Tabelle kann ausreichen."
+      },
+      {
+        "q": "Ist das bereits eine Kundenreferenz?",
+        "a": "Die auf dieser Seite beschriebenen Reporting-Lösungen sind Leistungsbeispiele. Entwickelte Anwendungen finden Sie unter Projekte."
+      }
+    ],
+    "related": [
+      "schnittstellen-api",
+      "excel-prozesse-automatisieren",
+      "prozessautomatisierung"
+    ],
+    "project": "",
+    "problemTitle": "Der Monatsbericht beginnt mit denselben Exporten.",
+    "detailTitle": "Eine gemeinsame Grundlage für Ihre Zahlen.",
+    "detailStyle": "matrix",
+    "cardTitle": "Berichte erstellen, ohne jeden Monat Daten zu kopieren.",
+    "cardText": "Ich verbinde Datenquellen und wiederkehrende Auswertungen. Damit Ihr Team Zahlen prüfen und nutzen kann, statt sie regelmäßig neu zusammenzustellen."
+  },
+  {
+    "slug": "crm-automatisieren",
+    "kind": "Lösung",
+    "title": "Kundendaten pflegen, ohne alles erneut einzugeben.",
+    "lead": "Anfragen, Kontakte und nächste Schritte gehören in einen gemeinsamen Arbeitsablauf. Ich verbinde Ihr CRM mit den Informationen, die bereits in anderen Systemen entstehen.",
+    "problem": "Kundendaten stehen im CRM, neue Informationen aber im Postfach oder einer Tabelle. Nach einem Kontakt bleiben Status und nächste Schritte unverändert, weil die Pflege zusätzliche Arbeit verursacht.",
+    "steps": [
+      {
+        "title": "Kundenidentifikation",
+        "text": "Eindeutige Kennungen verbinden Kontakte aus CRM, Formularen und anderen Anwendungen. Ein Name allein ist häufig keine ausreichende Zuordnung."
+      },
+      {
+        "title": "Dubletten",
+        "text": "Mögliche Mehrfacheinträge werden erkannt und nach festgelegten Regeln behandelt. Kritische Zusammenführungen erhalten eine Freigabe."
+      },
+      {
+        "title": "Führende Datenquelle",
+        "text": "Für jedes synchronisierte Feld steht fest, welches System maßgeblich ist. So überschreibt eine alte Liste keine neu gepflegte Adresse."
+      },
+      {
+        "title": "Status und Folgeaufgaben",
+        "text": "Definierte Ereignisse aktualisieren den Bearbeitungsstatus oder erzeugen Aufgaben. Die nächste Aktion wird einem Verantwortlichen zugeordnet."
+      }
+    ],
+    "result": [
+      "Wiederholte Eingaben zwischen Anwendungen reduzieren.",
+      "Status und Folgeaufgaben aus definierten Ereignissen ableiten.",
+      "Kundendaten nach nachvollziehbaren Regeln aktualisieren."
+    ],
+    "requirements": "Welche Funktionen erreichbar sind, hängt vom CRM, seinen Berechtigungen und der API ab. Ich prüfe den benötigten Zugriff anhand Ihrer konkreten Datenwege.",
+    "cost": "Quellen, Datenqualität, Synchronisierungsrichtung und gewünschte Folgeaktionen bestimmen den Umfang. Die Bereinigung vorhandener Daten wird im Angebot separat ausgewiesen, wenn sie erforderlich ist.",
+    "faq": [
+      {
+        "q": "Wird mein CRM unterstützt?",
+        "a": "Das wird anhand der verfügbaren API, Berechtigungen und benötigten Funktionen geprüft. Eine pauschale Unterstützung aller Produkte wird nicht vorausgesetzt."
+      },
+      {
+        "q": "Können bestehende Dubletten bereinigt werden?",
+        "a": "Das kann ein eigener Projektschritt sein. Für Zusammenführungen müssen Regeln und gegebenenfalls eine Freigabe vereinbart werden."
+      }
+    ],
+    "related": [
+      "schnittstellen-api",
+      "email-automatisieren",
+      "prozessautomatisierung"
+    ],
+    "project": "",
+    "problemTitle": "Der Kundenkontakt ist erledigt. Die CRM-Pflege bleibt liegen.",
+    "detailTitle": "Kundendaten gezielt übernehmen und aktuell halten.",
+    "detailStyle": "matrix",
+    "cardTitle": "Kundendaten pflegen, ohne alles erneut einzugeben.",
+    "cardText": "Anfragen, Kontakte und nächste Schritte gehören in einen gemeinsamen Arbeitsablauf. Ich verbinde Ihr CRM mit den Informationen, die bereits in anderen Systemen entstehen."
+  },
+  {
+    "slug": "ki-automatisierung",
+    "kind": "Leistung",
+    "title": "KI dort einsetzen, wo Informationen unstrukturiert sind.",
+    "lead": "Dokumente auslesen, Texte einordnen und Entwürfe vorbereiten: Ich integriere KI in einen klar definierten Arbeitsablauf mit Regeln, Prüfungen und menschlicher Verantwortung.",
+    "problem": "Ein KI-Werkzeug kann einen Text verstehen. Damit daraus ein verlässlicher Geschäftsprozess wird, müssen Eingänge, Datenzugriffe, Ergebnisprüfung und Übergabe an andere Systeme zusammenpassen.",
+    "steps": [
+      {
+        "title": "Dokumente und Texte verarbeiten",
+        "text": "KI unterstützt beim Auslesen, Einordnen und Vorbereiten unstrukturierter Inhalte. Für strukturierte Daten und feste Berechnungen nutze ich direkte Verarbeitung."
+      },
+      {
+        "title": "Ergebnisse prüfen",
+        "text": "Anhand echter Beispieldokumente wird geprüft, ob die benötigten Angaben korrekt erkannt werden. Unvollständige oder widersprüchliche Ergebnisse erhalten einen Prüfweg."
+      },
+      {
+        "title": "Aktionen freigeben",
+        "text": "Ein vorbereiteter Entwurf ist etwas anderes als eine verbindliche Entscheidung. Fachliche Freigaben werden vor der Datenänderung oder dem Versand eingebaut."
+      },
+      {
+        "title": "Zugriffe begrenzen",
+        "text": "Ein KI-Schritt erhält die Daten und Werkzeuge, die er für seine Aufgabe braucht. Eingehende Dokumentinhalte werden nicht als Berechtigung für zusätzliche Aktionen behandelt."
+      }
+    ],
+    "result": [
+      "Dokumentinhalte für nachgelagerte Prozesse strukturieren.",
+      "Wiederkehrende Einordnung und Vorbereitung unterstützen.",
+      "KI mit fachlichen Regeln und bestehenden Anwendungen verbinden."
+    ],
+    "requirements": "Ich integriere KI in einen begrenzten Arbeitsauftrag. Datenwege, Anbieter und Qualitätsanforderungen werden vor der Umsetzung festgelegt. Die Rechnungsdokument-Verarbeitung ist ein vorhandenes Praxisbeispiel.",
+    "cost": "Entwicklung, Anbindung und laufende Verarbeitung werden im Angebot getrennt dargestellt. Dokumentvielfalt, Prüfaufwand und Verarbeitungsvolumen bestimmen den Aufwand.",
+    "faq": [
+      {
+        "q": "Warum reicht ein ChatGPT-Zugang nicht?",
+        "a": "Einzelne Eingaben lösen noch keine systemübergreifenden Abläufe aus. Integration, Datenzuordnung, Freigaben und Betrieb müssen zusätzlich entwickelt werden."
+      },
+      {
+        "q": "Setzen Sie immer KI ein?",
+        "a": "Nein. Für feste Regeln, strukturierte Daten und Berechnungen wird zuerst eine deterministische Lösung geprüft."
+      },
+      {
+        "q": "Welche praktische Erfahrung gibt es?",
+        "a": "Ein beschriebener Anwendungsfall ist das KI-gestützte Auslesen von Rechnungsdokumenten zur Vorbereitung automatisierter Buchhaltungsabläufe."
+      }
+    ],
+    "related": [
+      "rechnungsverarbeitung-automatisieren",
+      "email-automatisieren",
+      "prozessautomatisierung"
+    ],
+    "project": "",
+    "problemTitle": "Ein erkannter Text ist noch kein funktionierender Geschäftsprozess.",
+    "detailTitle": "KI mit Daten, Regeln und Verantwortung verbinden.",
+    "detailStyle": "modules",
+    "cardTitle": "KI dort einsetzen, wo Informationen unstrukturiert sind.",
+    "cardText": "Dokumente auslesen, Texte einordnen und Entwürfe vorbereiten: Ich integriere KI in einen klar definierten Arbeitsablauf mit Regeln, Prüfungen und menschlicher Verantwortung."
+  },
+  {
+    "slug": "n8n-agentur",
+    "kind": "Leistung",
+    "title": "n8n-Automatisierung mit einem persönlichen Ansprechpartner.",
+    "lead": "Sie suchen eine n8n-Agentur für einen konkreten Ablauf? Bei Prozess-Orchester sprechen Sie direkt mit mir. Ich plane und entwickle Workflows passend zu Ihren Systemen.",
+    "problem": "Ein erster Workflow ist schnell gebaut. Im Alltag kommen fehlende Daten, abgelaufene Zugänge und Sonderfälle hinzu. Dann zeigt sich, ob aus verbundenen Schritten ein brauchbarer Prozess geworden ist.",
+    "steps": [
+      {
+        "title": "Workflow-Aufbau",
+        "text": "Ein klarer Auslöser startet die Verarbeitung. Datenzuordnung, Geschäftsregeln und Freigaben bilden den tatsächlichen Ablauf ab."
+      },
+      {
+        "title": "Integrationen",
+        "text": "Vorhandene Nodes oder direkte HTTP-Anfragen verbinden die benötigten Systeme. Webhooks nehmen Ereignisse entgegen; regelmäßige Ausführungen übernehmen geplante Aufgaben."
+      },
+      {
+        "title": "Fehlerwege",
+        "text": "Abgelaufene Zugänge, ungültige Eingaben und nicht erreichbare Dienste werden als eigene Fälle behandelt. Wiederholungen müssen Doppelverarbeitung vermeiden."
+      },
+      {
+        "title": "Betrieb und Übergabe",
+        "text": "Test und produktiver Ablauf werden getrennt geprüft. Ich dokumentiere die Verbindungen und richte die passende Überwachung ein. Für laufende Pflege und Erweiterung bin ich auf Wunsch weiter ansprechbar."
+      }
+    ],
+    "result": [
+      "Wiederkehrende Schritte zwischen Anwendungen verbinden.",
+      "Workflows um die erforderliche Prozesslogik ergänzen.",
+      "Persönliche Abstimmung von Analyse bis Einführung."
+    ],
+    "requirements": "n8n ist ein Werkzeug für die Orchestrierung. Eine individuelle Benutzeroberfläche oder komplexe Anwendungslogik kann besser in einer eigenen Anwendung liegen. Ich kombiniere die Bausteine passend zum Prozess.",
+    "cost": "Der Projektvorschlag enthält Integrationen, Prozesslogik, Fehlerbehandlung und Einführung. Hosting und externe Dienste werden als laufende Kosten ausgewiesen, soweit sie anfallen.",
+    "faq": [
+      {
+        "q": "Arbeiten Sie ausschließlich mit n8n?",
+        "a": "Nein. Die Technik folgt dem Prozess. Individuelle Software und direkte API-Anbindungen sind gleichwertige Möglichkeiten."
+      },
+      {
+        "q": "Ist ein Betrieb auf eigener Infrastruktur möglich?",
+        "a": "Das kann geprüft werden. Infrastruktur, Wartung, Zugriffe und die Bedingungen der eingesetzten Software müssen zum vorgesehenen Betrieb passen."
+      },
+      {
+        "q": "Kann ein bestehender Workflow weiterentwickelt werden?",
+        "a": "Nach einer Bestandsaufnahme können Fehlerbehandlung, Anbindungen oder neue Schritte ergänzt werden. Der vorhandene Aufbau und seine Dokumentation bestimmen den Aufwand."
+      }
+    ],
+    "related": [
+      "prozessautomatisierung",
+      "schnittstellen-api",
+      "ki-automatisierung"
+    ],
+    "project": "",
+    "problemTitle": "Der Workflow läuft im Test. Jetzt muss er den Alltag tragen.",
+    "detailTitle": "n8n-Workflows von der Anbindung bis zum Betrieb.",
+    "detailStyle": "modules",
+    "cardTitle": "n8n-Automatisierung mit einem persönlichen Ansprechpartner.",
+    "cardText": "Sie suchen eine n8n-Agentur für einen konkreten Ablauf? Bei Prozess-Orchester sprechen Sie direkt mit mir. Ich plane und entwickle Workflows passend zu Ihren Systemen."
+  }
+]

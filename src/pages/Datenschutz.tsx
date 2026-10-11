@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 
 const Datenschutz = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="po-legal min-h-screen bg-white">
       <Navigation />
       <main className="pt-20 pb-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -69,6 +69,26 @@ const Datenschutz = () => {
                   Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte eine 
                   SSL-bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile 
                   des Browsers von "http://" auf "https://" wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-xl font-semibold text-gray-900 mb-3">6. Meta-App „Marketing API“</h2>
+                <p className="text-gray-700 mb-4">
+                  Ich nutze die Meta-App „Marketing API“ als internes Werkzeug, um berechtigte Facebook-Seiten und
+                  Werbekonten zu verwalten, Inhalte zu veröffentlichen und die Leistung von Anzeigen auszuwerten.
+                  Besucher dieser Website müssen sich dafür nicht mit einem Facebook-Konto anmelden.
+                </p>
+                <p className="text-gray-700 mb-4">
+                  Bei der Nutzung der Meta-Schnittstellen können insbesondere Seiten- und Werbekonto-Kennungen,
+                  Angaben zu Anzeigen und deren Leistung sowie Interaktionen mit verwalteten Seiten verarbeitet
+                  werden, soweit Meta diese Daten für die jeweilige Funktion bereitstellt. Die Verarbeitung dient
+                  der Verwaltung der Seiten und Werbemaßnahmen. Verantwortlich ist die oben genannte Stelle.
+                </p>
+                <p className="text-gray-700">
+                  Wenn Sie die Löschung personenbezogener Daten beantragen möchten, die im Zusammenhang mit dieser
+                  App bei mir gespeichert sind, finden Sie die Schritte unter{' '}
+                  <a className="text-blue-700 underline" href="/datenloeschung">Datenlöschung für die Meta-App</a>.
                 </p>
               </div>
             </div>

@@ -3,10 +3,13 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import { SolutionPage, ProjectPage, ProjectsPage, AboutPage, ContactPage } from './pages/ContentPages';
+import { sitePages, projectPages } from './content/catalog';
 import Index from "./pages/Index";
 import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
+import Datenloeschung from "./pages/Datenloeschung";
 import AGB from "./pages/AGB";
 import NotFound from "./pages/NotFound";
 
@@ -17,16 +20,19 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/impressum" element={<Impressum />} />
           <Route path="/datenschutz" element={<Datenschutz />} />
+          <Route path="/datenloeschung" element={<Datenloeschung />} />
           <Route path="/agb" element={<AGB />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          {sitePages.map(page => <Route key={page.slug} path={'/' + page.slug} element={<SolutionPage slug={page.slug} />} />)}
+          {projectPages.map(page => <Route key={page.slug} path={'/projekte/' + page.slug} element={<ProjectPage slug={page.slug} />} />)}
+          <Route path="/projekte" element={<ProjectsPage />} />
+          <Route path="/ueber-mich" element={<AboutPage />} />
+          <Route path="/kontakt" element={<ContactPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
 );

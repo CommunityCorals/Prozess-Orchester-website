@@ -1,0 +1,98 @@
+[
+  {
+    "slug": "angebotssoftware",
+    "title": "Vom Leistungskatalog zum versandfertigen Angebot.",
+    "label": "Individualsoftware · Baubranche",
+    "type": "Anonymisiertes Kundenprojekt",
+    "lead": "Leistungen auswählen, kalkulieren, PDF erzeugen und direkt versenden: Eine tabletoptimierte Anwendung bringt die Angebotserstellung eines Generalunternehmens in ein System.",
+    "context": "Im bisherigen Ablauf wurden Leistungen und Preise aus getrennten Grundlagen zusammengestellt, Kalkulation und Dokument separat bearbeitet, PDF und E-Mail vorbereitet und der Status gesondert verfolgt. Die entwickelte Anwendung verbindet diese Arbeitsschritte.",
+    "steps": [
+      "Kunden auswählen und Angaben verwalten",
+      "Leistungen und Zusatzpositionen aus dem Katalog zusammenstellen",
+      "Individuelles Angebot kalkulieren und prüfen",
+      "Professionelles PDF automatisch erzeugen",
+      "Angebot direkt per E-Mail versenden und Status verwalten"
+    ],
+    "result": "Das Team erstellt und verwaltet Angebote in einem durchgängigen Ablauf. Der gepflegte Katalog liefert Leistungen und Preise; aus der Kalkulation entsteht das PDF. Versand, Kundenangaben und Angebotsstatus bleiben im selben System.",
+    "systems": [
+      "Tabletoptimierte Webanwendung",
+      "Leistungs- und Preiskatalog",
+      "PDF-Erzeugung",
+      "E-Mail-Versand"
+    ],
+    "related": [
+      "angebotserstellung-automatisieren",
+      "individualsoftware-kmu"
+    ],
+    "comparison": [
+      {
+        "before": "Leistungen und Preise aus getrennten Grundlagen zusammenstellen",
+        "after": "Kunde und Leistungen im geführten Ablauf auswählen"
+      },
+      {
+        "before": "Kalkulation und Angebotsdokument separat bearbeiten",
+        "after": "Angebot anhand des hinterlegten Katalogs kalkulieren"
+      },
+      {
+        "before": "PDF und E-Mail-Versand gesondert vorbereiten",
+        "after": "PDF automatisch erzeugen und direkt versenden"
+      },
+      {
+        "before": "Angebotsstatus separat verfolgen",
+        "after": "Kunden, Angebote und Bearbeitungsstatus im selben System verwalten"
+      }
+    ]
+  },
+  {
+    "slug": "versandkostenabgleich",
+    "title": "Versandrechnung und Sendungsdaten zusammenbringen.",
+    "label": "Automatisierung · Versand",
+    "type": "Anonymisiertes Praxisprojekt",
+    "lead": "Versandrechnungen werden den Sendungsdaten gegenübergestellt. Der automatisierte Abgleich macht Gewichtsüberschreitungen für die Nachberechnung nutzbar.",
+    "context": "Eine Gewichtsüberschreitung auf der Dienstleisterrechnung muss zur ursprünglichen Sendung passen. Die Lösung führt Rechnungs- und Versanddaten zusammen und verarbeitet die Angaben für die Nachberechnung.",
+    "steps": [
+      "Versandrechnung als Datengrundlage übernehmen",
+      "Abgerechnete Sendungen den Versanddaten zuordnen",
+      "Gewichtsüberschreitungen anhand der vorhandenen Angaben abgleichen",
+      "Daten für die automatisierte Nachberechnung aufbereiten"
+    ],
+    "result": "Aus getrennten Rechnungs- und Versanddaten entsteht eine gemeinsame Grundlage für die Nachberechnung von Gewichtsüberschreitungen. Der Abgleich und die zugehörige Datenverarbeitung laufen automatisiert.",
+    "systems": [
+      "Versandrechnungen",
+      "Versanddaten",
+      "Abgleich und Nachberechnung"
+    ],
+    "related": [
+      "versandprozesse-automatisieren",
+      "schnittstellen-api"
+    ],
+    "comparison": []
+  },
+  {
+    "slug": "handelsprozesse",
+    "title": "Eigene Software für den Handelsalltag.",
+    "label": "Betriebliche Eigenentwicklung · E-Commerce",
+    "type": "Anonymisiertes Eigenprojekt",
+    "lead": "Rechnungen aus Bestelldaten erstellen, Liefertermine planen, Versand buchen und Support bearbeiten: eigene Module für die täglichen Aufgaben eines Handelsbetriebs.",
+    "context": "Im eigenen digitalen Handelsbetrieb werden Bestelldaten für Rechnungserstellung, Versand und Kundenservice gebraucht. Dafür entstanden eigene Module, die diese Aufgaben direkt abbilden.",
+    "steps": [
+      "Rechnungen auf Basis von Bestelldaten erstellen",
+      "Liefertermine im Versandplanungsmodul planen",
+      "Versandbuchungen über die vorgesehene Anbindung vorbereiten und ausführen",
+      "Supporttickets und Kundenkommunikation in einem eigenen Modul bearbeiten"
+    ],
+    "result": "Das Rechnungsmodul erstellt Rechnungen auf Basis der Bestellungen. Das Versandmodul verbindet Lieferterminplanung und Versandbuchung. Das Supportmodul unterstützt Tickets und Kundenkommunikation. Ergänzende Funktionen personalisieren das Kundenerlebnis und zeigen Meilensteine im Warenkorb.",
+    "systems": [
+      "Bestelldaten",
+      "Rechnungsmodul",
+      "Versandplanung und Buchung",
+      "Supportmodul"
+    ],
+    "related": [
+      "individualsoftware-kmu",
+      "versandprozesse-automatisieren",
+      "schnittstellen-api"
+    ],
+    "comparison": []
+  }
+]
