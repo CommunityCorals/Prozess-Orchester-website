@@ -323,10 +323,10 @@ html { scroll-padding-top: 95px; }
 .po-ai-hero-example blockquote { margin:27px 0; font-size:clamp(22px,2.1vw,30px); line-height:1.45; letter-spacing:-.025em; font-weight:500; }
 .po-ai-hero-example p { border-top:1px solid #45516b; padding-top:22px; color:#c6d1e2; font-size:14px; line-height:1.75; }
 .po-ai-table { margin-top:42px; border-top:1px solid #b9c6d8; }
-.po-ai-table-head, .po-ai-table-row { display:grid; grid-template-columns:.65fr 1fr 1fr; gap:30px; }
+.po-ai-table-head, .po-ai-table-row { display:grid; grid-template-columns:minmax(0,.65fr) repeat(2,minmax(0,1fr)); gap:30px; }
 .po-ai-table-head { padding:16px 0; color:var(--po-muted); font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.1em; }
 .po-ai-table-row { border-top:1px solid var(--po-line); padding:28px 0; align-items:start; }
-.po-ai-table-row h3 { font-size:21px; line-height:1.4; font-weight:600; }
+.po-ai-table-row h3 { font-size:21px; line-height:1.4; font-weight:600; overflow-wrap:anywhere; hyphens:auto; }
 .po-ai-table-row p { color:var(--po-muted); font-size:15px; line-height:1.8; }
 .po-ai-table-row p:last-child { color:var(--po-ink); }
 .po-ai-table-note { color:var(--po-muted); font-size:13px; line-height:1.7; margin-top:17px; }
@@ -446,7 +446,7 @@ html { scroll-padding-top: 95px; }
  .po-ai-table-row { grid-template-columns:1fr; gap:12px; }
  .po-ai-table-row p::before { display:block; margin-bottom:5px; font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:.1em; color:var(--po-blue); }
  .po-ai-table-row p:nth-of-type(1)::before { content:'Heute'; }
- .po-ai-table-row p:nth-of-type(2)::before { content:'Mit KI-Unterstützung'; }
+ .po-ai-table-row p:nth-of-type(2)::before { content:'Mit Ihrem KI-Assistenten'; }
  .po-ai-steps { margin-top:34px; }
  .po-reading-grid, .po-check-grid, .po-check-details, .po-two-columns, .po-solution-links { grid-template-columns:1fr; gap:32px; }
  .po-price-panel { padding:26px 22px; }
