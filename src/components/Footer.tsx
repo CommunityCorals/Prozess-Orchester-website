@@ -8,6 +8,6 @@ export const Footer = () => <footer className="po-footer"><div className="po-wra
       <span>Krefeld, Deutschland</span>
     </address>
   </div>
-  <nav className="po-footer-links" aria-label="Leistungen und Kontakt"><a href="/prozessautomatisierung">Prozessautomatisierung</a><a href="/individualsoftware-kmu">Individualsoftware</a><a href="/schnittstellen-api">Schnittstellen</a><a href="/ki-automatisierung">KI-Automatisierung</a><a href="/n8n-agentur">n8n</a><a href="/kontakt">Kontakt</a></nav>
+  <nav className="po-footer-links" aria-label="Leistungen und Kontakt"><a href="/prozessautomatisierung">Prozessautomatisierung</a><a href="/individualsoftware-kmu">Individualsoftware</a><a href="/schnittstellen-api">Schnittstellen</a><a href="/ki-arbeitsplatz">KI für Mitarbeitende</a><a href="/ki-automatisierung">KI-Automatisierung</a><a href="/n8n-agentur">n8n</a><a href="/kontakt">Kontakt</a></nav>
   <div className="po-footer-bottom"><p>© {new Date().getFullYear()} Prozess-Orchester · Krefeld</p><nav aria-label="Rechtliche Informationen"><a href="/impressum">Impressum</a><a href="/datenschutz">Datenschutz</a><a href="/datenloeschung">Datenlöschung</a><a href="/agb">AGB</a></nav></div>
 </div></footer>;

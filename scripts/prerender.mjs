@@ -5,6 +5,7 @@ const projects = JSON.parse(await readFile('src/content/projects.json', 'utf8'))
 const origin = 'https://prozess-orchester.de';
 const fixed = [
  ['/', 'Prozessautomatisierung & Individualsoftware für KMU', 'Ihre Software ist vorhanden. Der Prozess dazwischen fehlt. Ich verbinde Systeme und entwickle Automatisierung und Individualsoftware für KMU.'],
+ ['/ki-arbeitsplatz','KI-Arbeitsplatz für Mitarbeitende','E-Mails, PDFs und Excel-Dateien mit KI-Unterstützung bearbeiten: konkrete Vorher-Nachher-Beispiele, begrenzte Zugriffe und Freigaben für Ihr Team.'],
  ['/projekte','Projekte: Software & Automatisierung','Anonymisierte Praxisprojekte: Angebotssoftware, Versandkostenabgleich und betriebliche Handelsmodule. Konkrete Aufgaben und entwickelte Lösungen.'],
  ['/ueber-mich','Dominique Deutzmann – Ihr Ansprechpartner','Prozess-Orchester aus Krefeld: Ich entwickle Automatisierungen, individuelle Software und Schnittstellen für die tägliche Arbeit in KMU.'],
  ['/kontakt','Kontakt und kostenloses Kennenlerngespräch','Beschreiben Sie Ihren Ablauf. Im kostenlosen Kennenlerngespräch klären wir einen sinnvollen Einstieg in Automatisierung und Softwareentwicklung.'],

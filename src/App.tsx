@@ -7,6 +7,7 @@ import { Routes, Route } from "react-router-dom";
 import { SolutionPage, ProjectPage, ProjectsPage, AboutPage, ContactPage } from './pages/ContentPages';
 import { sitePages, projectPages } from './content/catalog';
 import Index from "./pages/Index";
+import { AIWorkplacePage } from './components/AIWorkplace';
 import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
 import Datenloeschung from "./pages/Datenloeschung";
@@ -22,6 +23,7 @@ const App = () => (
       <Sonner />
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/ki-arbeitsplatz" element={<AIWorkplacePage />} />
           <Route path="/impressum" element={<Impressum />} />
           <Route path="/datenschutz" element={<Datenschutz />} />
           <Route path="/datenloeschung" element={<Datenloeschung />} />
