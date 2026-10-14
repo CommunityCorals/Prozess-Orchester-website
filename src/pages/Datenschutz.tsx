@@ -45,7 +45,7 @@ const Datenschutz = () => {
                 <h3 className="text-lg font-medium text-gray-900 mb-2">Anzeigenherkunft und Nutzung der Website</h3>
                 <p className="text-gray-700 mb-4">
                   Für die Auswertung unserer Einstiegsseiten zählen wir Seitenaufrufe, die Nutzung von Beispielen
-                  sowie Beginn, Erfolg und Fehler beim Kontaktformular. Das separate Ereignisprotokoll enthält
+                  sowie Klicks auf den Kontaktbereich. Das separate Ereignisprotokoll enthält
                   Zeitpunkt, Seitenkategorie, eine bekannte Kampagnenbezeichnung und gegebenenfalls die gewählte
                   Beispielaufgabe. Es enthält keine Formulareingaben, IP-Adressen oder Besucherkennungen.
                   Hierfür setzen wir keine Cookies und verwenden keinen Browserspeicher. Ein vom Browser
@@ -53,8 +53,8 @@ const Datenschutz = () => {
                 </p>
                 <p className="text-gray-700 mb-4">
                   Kampagnenangaben werden beim Wechsel zwischen unseren Seiten in der Adresse weitergegeben.
-                  Wenn Sie eine Anfrage senden, werden die Einstiegsseite, die Kampagnenangaben sowie Ihre
-                  freiwilligen Angaben zu Aufgabe und Programmen zur Bearbeitung der Anfrage mit übermittelt.
+                  Das Kontaktformular übermittelt Ihre Angaben zu Name, E-Mail, Unternehmen und Anliegen
+                  zur Bearbeitung Ihrer Anfrage an unseren n8n-Workflow.
                 </p>
                 <h3 className="text-lg font-medium text-gray-900 mb-2">Server-Log-Dateien</h3>
                 <p className="text-gray-700">
