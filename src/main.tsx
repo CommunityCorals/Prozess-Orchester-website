@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 import './index.css'
 import './home-design.css'
 import './campaign.css'
+import './site-design.css'
 import { initCampaign } from './lib/campaign'
 initCampaign()
 

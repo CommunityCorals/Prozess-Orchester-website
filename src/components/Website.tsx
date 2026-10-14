@@ -1,4 +1,4 @@
-import { ArrowUpRight, Plus } from 'lucide-react';
+import { ArrowUpRight, FileText, PackageCheck, Workflow, Plus } from 'lucide-react';
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 import { Navigation } from './Navigation';
 import { Footer } from './Footer';
@@ -28,7 +28,7 @@ export function Cards({ slugs }: { slugs: string[] }) {
   return <div className="po-card-grid">{slugs.map(slug => { const page = pages.find(p => p.slug === slug); return page && <a className="po-content-card" href={'/' + page.slug} key={slug}><span className="po-kicker">{page.kind}</span><h3>{page.cardTitle}</h3><p>{page.cardText}</p><span className="po-card-link">Mehr erfahren <ArrowUpRight size={19} /></span></a>; })}</div>;
 }
 export function ProjectCards() {
-  return <div className="po-card-grid">{projects.map((project, i) => <a className="po-content-card po-project-card" href={'/projekte/' + project.slug} key={project.slug}><div className="po-project-index" aria-hidden="true">0{i + 1}<ArrowUpRight /></div><span className="po-kicker">{project.label}</span><h3>{project.title}</h3><p>{project.lead}</p><span className="po-card-link">Projekt ansehen <ArrowUpRight size={19} /></span></a>)}</div>;
+  return <div className="po-card-grid">{projects.map((project, i) => <a className="po-content-card po-project-card" href={'/projekte/' + project.slug} key={project.slug}><span className="po-card-category">0{i + 1} / {project.label}</span><div className="po-project-icon" aria-hidden="true">{i === 0 ? <FileText size={28} /> : i === 1 ? <PackageCheck size={28} /> : <Workflow size={28} />}</div><h3>{project.title}</h3><p>{project.lead}</p><span className="po-card-link">Projekt ansehen <ArrowUpRight size={19} /></span></a>)}</div>;
 }
 export function FAQList({ items }: { items: { q: string; a: string }[] }) {
   return <div className="po-question-list">{items.map(item => <details key={item.q}><summary>{item.q}<Plus size={20} aria-hidden="true" /></summary><p>{item.a}</p></details>)}</div>;

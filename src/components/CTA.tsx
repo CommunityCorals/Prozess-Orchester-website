@@ -1,4 +1,4 @@
-import { ArrowRight, MessageSquare, CheckCircle2 } from "lucide-react";
+import { ArrowUpRight, MessageSquare, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
@@ -205,10 +205,10 @@ export const CTA = () => {
                 <Button
                   type="submit"
                   disabled={isLoading}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-lg h-12 text-base font-medium shadow-soft"
+                  className="cp-button w-full h-auto"
                 >
                   {isLoading ? 'Wird gesendet...' : 'Anfrage senden'}
-                  {!isLoading && <ArrowRight className="ml-2 w-4 h-4" />}
+                  {!isLoading && <ArrowUpRight className="w-4 h-4" aria-hidden="true" />}
                 </Button>
               </form>
 
