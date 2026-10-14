@@ -3,5 +3,8 @@ import App from './App.tsx'
 import { BrowserRouter } from 'react-router-dom'
 import './index.css'
 import './home-design.css'
+import './campaign.css'
+import { initCampaign } from './lib/campaign'
+initCampaign()
 
 createRoot(document.getElementById("root")!).render(<BrowserRouter><App /></BrowserRouter>);

@@ -18,11 +18,11 @@ export function Layout({ children, contact = false }: { children: ReactNode; con
 export function Label({ children }: { children: ReactNode }) {
   return <p className="po-kicker"><span aria-hidden="true">↗</span> {children}</p>;
 }
-export function ContactLink({ children = 'Projekt besprechen' }: { children?: ReactNode }) {
+export function ContactLink({ children = 'Aufgaben-Check anfragen' }: { children?: ReactNode }) {
   return <a className="po-button" href={contactHref}>{children}<ArrowUpRight size={18} aria-hidden="true" /></a>;
 }
 export function PageIntro({ eyebrow, title, lead, actions = true }: { eyebrow: string; title: string; lead: string; actions?: boolean }) {
-  return <header className="po-page-intro"><div className="po-wrap"><a href="/" className="po-breadcrumb">Startseite <span aria-hidden="true">/</span> {eyebrow}</a><Label>{eyebrow}</Label><h1>{title}</h1><p className="po-page-lead">{lead}</p>{actions && <div className="po-actions"><ContactLink /><span className="po-small">Kostenloses Kennenlerngespräch · etwa 20–30 Minuten</span></div>}</div></header>;
+  return <header className="po-page-intro"><div className="po-wrap"><a href="/" className="po-breadcrumb">Startseite <span aria-hidden="true">/</span> {eyebrow}</a><Label>{eyebrow}</Label><h1>{title}</h1><p className="po-page-lead">{lead}</p>{actions && <div className="po-actions"><ContactLink /><span className="po-small">Kostenloser Aufgaben-Check · etwa 20–30 Minuten</span></div>}</div></header>;
 }
 export function Cards({ slugs }: { slugs: string[] }) {
   return <div className="po-card-grid">{slugs.map(slug => { const page = pages.find(p => p.slug === slug); return page && <a className="po-content-card" href={'/' + page.slug} key={slug}><span className="po-kicker">{page.kind}</span><h3>{page.cardTitle}</h3><p>{page.cardText}</p><span className="po-card-link">Mehr erfahren <ArrowUpRight size={19} /></span></a>; })}</div>;

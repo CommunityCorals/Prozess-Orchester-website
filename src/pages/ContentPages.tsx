@@ -44,5 +44,5 @@ export function AboutPage() {
  </Layout>;
 }
 export function ContactPage() {
- return <Layout><PageIntro eyebrow="Kontakt" title="Welcher Ablauf kostet Ihr Team heute unnötig Zeit?" lead="Zeigen Sie mir Ihren Engpass. Im kostenlosen Projektgespräch besprechen wir Ihre Systeme, Ihr Ziel und einen konkreten Lösungsweg. Planen Sie dafür etwa 20–30 Minuten ein." actions={false}/><div className="po-contact-page"><ContactForm /></div><div className="po-wrap po-contact-alternatives"><a href="mailto:info@prozess-orchester.de">info@prozess-orchester.de</a><a href="tel:+4917645691439">+49 176 45691 439</a><span>Dominique Deutzmann · Krefeld</span></div></Layout>;
+ return <Layout><PageIntro eyebrow="Kontakt" title="Ihr kostenloser Aufgaben-Check." lead="Eine konkrete Büroaufgabe oder ein flexibler KI-Assistent: In 20–30 Minuten schauen wir gemeinsam auf Ihre Aufgaben, Programme und einen sinnvollen ersten Schritt." actions={false}/><div className="po-contact-page"><ContactForm /></div><div className="po-wrap po-contact-alternatives"><a href="mailto:info@prozess-orchester.de">info@prozess-orchester.de</a><a href="tel:+4917645691439">+49 176 45691 439</a><span>Dominique Deutzmann · Krefeld</span></div></Layout>;
 }

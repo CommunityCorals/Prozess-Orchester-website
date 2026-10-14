@@ -11,5 +11,6 @@ FROM nginx:stable-alpine
 COPY --from=build /app/dist /usr/share/nginx/html
 # Copy a custom Nginx configuration if it exists
 COPY nginx.conf /etc/nginx/conf.d/default.conf
+RUN mkdir -p /var/log/po-events && chown nginx:nginx /var/log/po-events
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]

@@ -4,11 +4,12 @@ const pages = JSON.parse(await readFile('src/content/pages.json', 'utf8'));
 const projects = JSON.parse(await readFile('src/content/projects.json', 'utf8'));
 const origin = 'https://prozess-orchester.de';
 const fixed = [
- ['/', 'Prozessautomatisierung & Individualsoftware für KMU', 'Ihre Software ist vorhanden. Der Prozess dazwischen fehlt. Ich verbinde Systeme und entwickle Automatisierung und Individualsoftware für KMU.'],
- ['/ki-arbeitsplatz','KI-Assistent für Warenwirtschaft, CRM und Buchhaltung','Ihr Team gibt den Auftrag: Ein KI-Assistent ruft Daten aus Ihren Systemen ab und übernimmt sie nach Freigabe in Warenwirtschaft, CRM und Buchhaltung.'],
+ ['/', 'Automatisierung & KI-Assistenten für Ihr Team', 'E-Mails, Dokumente, Excel und ERP verbinden. Büroarbeit automatisieren und Mitarbeitenden einen flexiblen KI-Assistenten geben. Persönlich aus Krefeld.'],
+ ['/weniger-papierkram','Weniger Papierkram. Mehr Zeit fürs Geschäft.','Bestellungen, Rechnungen und Excel-Daten automatisch verarbeiten und in ERP oder Warenwirtschaft übernehmen. Kostenlosen Aufgaben-Check anfragen.'],
+ ['/ki-assistent','Ihr KI-Assistent für die Aufgaben Ihrer Mitarbeitenden','Im Internet recherchieren, Unternehmensdaten auswerten und in Ihren Programmen arbeiten. Ein flexibler KI-Assistent, passend für Ihr Team eingerichtet.'],
  ['/projekte','Projekte: Software & Automatisierung','Anonymisierte Praxisprojekte: Angebotssoftware, Versandkostenabgleich und betriebliche Handelsmodule. Konkrete Aufgaben und entwickelte Lösungen.'],
  ['/ueber-mich','Dominique Deutzmann – Ihr Ansprechpartner','Prozess-Orchester aus Krefeld: Ich entwickle Automatisierungen, individuelle Software und Schnittstellen für die tägliche Arbeit in KMU.'],
- ['/kontakt','Kontakt und kostenloses Kennenlerngespräch','Beschreiben Sie Ihren Ablauf. Im kostenlosen Kennenlerngespräch klären wir einen sinnvollen Einstieg in Automatisierung und Softwareentwicklung.'],
+ ['/kontakt','Kostenlosen Aufgaben-Check anfragen','In 20–30 Minuten Aufgaben, Programme und einen sinnvollen Einstieg in Automatisierung oder einen flexiblen KI-Assistenten besprechen.'],
  ['/impressum','Impressum','Impressum und Anbieterangaben von Prozess-Orchester – Dominique Deutzmann.'],
  ['/datenschutz','Datenschutz','Informationen zur Verarbeitung personenbezogener Daten auf der Website und in der Meta-App von Prozess-Orchester.'],
  ['/datenloeschung','Datenlöschung für die Meta-App','Anleitung zur Löschung personenbezogener Daten im Zusammenhang mit der Meta-App von Prozess-Orchester.'],
@@ -28,8 +29,12 @@ for (const [path,title,description] of [...routes, ['/404','Seite nicht gefunden
   .replace(/<meta name="twitter:title"[^>]*>/, '<meta name="twitter:title" content="'+escape(fullTitle)+'" />')
   .replace(/<meta name="twitter:description"[^>]*>/, '<meta name="twitter:description" content="'+escape(description)+'" />')
   .replace('<div id="root"></div>', '<div id="root">'+render(path)+'</div>')
-  .replace('</head>', '<meta property="og:url" content="'+url+'" /><noscript><style>.reveal{opacity:1;transform:none}</style></noscript></head>');
+  .replace('</head>', '<meta property="og:url" content="'+url+'" /><noscript><style>.reveal{opacity:1;transform:none}.cp-form{display:none}</style></noscript></head>');
  if (path==='/404') html=html.replace('content="index, follow"','content="noindex, follow"');
+ if (['/', '/ki-assistent', '/weniger-papierkram'].includes(path)) {
+  const art = path === '/weniger-papierkram' ? 'papierkram' : 'ki-assistent';
+  html = html.replaceAll(origin + '/social-preview.png', origin + '/campaign/' + art + '.webp');
+ }
  const target = path === '/' ? 'dist' : 'dist'+path;
  await mkdir(target,{recursive:true}); await writeFile(target+'/index.html',html);
 }

@@ -1,228 +1,116 @@
-import { ArrowRight, MessageSquare, CheckCircle2 } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { useToast } from "@/hooks/use-toast";
-import { useState } from "react";
+import { ArrowUpRight, Check, Mail, Phone } from 'lucide-react';
+import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
-import { Reveal } from "@/components/Reveal";
+import { getAttribution, taskOptions, track } from '@/lib/campaign';
 
 export const CTA = () => {
-  const { toast } = useToast();
-  const [isLoading, setIsLoading] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    challenge: '',
-    honeypot: '' // Unsichtbares Spam-Schutz-Feld
-  });
-
   const { executeRecaptcha } = useGoogleReCaptcha();
+  const [task, setTask] = useState('');
+  const [busy, setBusy] = useState(false);
+  const [result, setResult] = useState<'success' | 'error' | null>(null);
+  const locked = useRef(false);
+  const started = useRef(false);
+  const endpoint = import.meta.env.VITE_N8N_WEBHOOK_URL;
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
+  useEffect(() => {
+    const listener = (event: Event) => {
+      const value = (event as CustomEvent<string>).detail;
+      if (taskOptions.some(([id]) => id === value)) { setTask(value); setResult(null); }
+    };
+    window.addEventListener('po:task', listener);
+    return () => window.removeEventListener('po:task', listener);
+  }, []);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  function start() {
+    if (!started.current) { started.current = true; track('form_start', task); }
+  }
 
-    if (!executeRecaptcha) {
-      toast({
-        title: "Fehler",
-        description: "reCAPTCHA nicht bereit. Bitte kurz warten und erneut versuchen.",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    // Honeypot-Validation für Spam-Schutz
-    if (formData.honeypot) {
-      console.log('Honeypot-Feld ausgefüllt, wahrscheinlich Spam.');
-      return;
-    }
-
-    setIsLoading(true);
-
+  async function submit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (locked.current) return;
+    const form = event.currentTarget;
+    const data = new FormData(form);
+    if (data.get('honeypot')) return;
+    if (!executeRecaptcha || !endpoint) { setResult('error'); track('form_error', task); return; }
+    locked.current = true;
+    setBusy(true);
+    setResult(null);
     try {
-      // reCAPTCHA-Token von Google abrufen
-      const token = await executeRecaptcha('contactForm');
-      console.log('reCAPTCHA Token erhalten:', token);
-
-      const webhookData = {
-        name: formData.name,
-        email: formData.email,
-        company: formData.company,
-        challenge: formData.challenge,
-        recaptchaToken: token,
-        timestamp: new Date().toISOString(),
-        source: 'Prozess Orchester Website'
-      };
-
-      console.log('Sende Daten an Webhook:', webhookData);
-
-      const response = await fetch(import.meta.env.VITE_N8N_WEBHOOK_URL, {
+      const recaptchaToken = await executeRecaptcha('contactForm');
+      const systems = String(data.get('systems') || '').trim();
+      const message = String(data.get('challenge') || '').trim();
+      const context = getAttribution();
+      const taskLabel = taskOptions.find(([id]) => id === task)?.[1];
+      // Include context in the existing field as well, so the existing email workflow retains it.
+      const challenge = [
+        message,
+        taskLabel && 'Aufgabe: ' + taskLabel,
+        systems && 'Eingesetzte Programme: ' + systems,
+        'Einstieg: ' + context.landingPage,
+        context.attribution.utm_campaign && 'Kampagne: ' + context.attribution.utm_campaign,
+      ].filter(Boolean).join('\n');
+      const response = await fetch(endpoint, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json',
-        },
-        mode: 'cors',
-        body: JSON.stringify(webhookData),
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        signal: AbortSignal.timeout(15000),
+        body: JSON.stringify({
+          name: String(data.get('name') || '').trim(),
+          email: String(data.get('email') || '').trim(),
+          company: String(data.get('company') || '').trim(),
+          challenge, recaptchaToken, timestamp: new Date().toISOString(), source: 'Prozess Orchester Website',
+          selectedTask: task || undefined, systems: systems || undefined, ...context,
+        }),
       });
-
-      console.log('Webhook Response Status:', response.status);
-      console.log('Webhook Response Headers:', response.headers);
-
-      // Da n8n Webhooks oft keinen Response Body haben, prüfen wir nur den Status
-      if (response.ok || response.status === 200) {
-        toast({
-          title: "Nachricht gesendet!",
-          description: "Vielen Dank für Ihre Anfrage. Wir melden uns in Kürze bei Ihnen.",
-        });
-
-        // Formular zurücksetzen
-        setFormData({
-          name: '',
-          email: '',
-          company: '',
-          challenge: '',
-          honeypot: ''
-        });
-      } else {
-        console.error('Webhook Response Error:', response.status, response.statusText);
-        throw new Error(`Webhook returned status: ${response.status}`);
-      }
-    } catch (error) {
-      console.error('Fehler beim Senden an Webhook:', error);
-      toast({
-        title: "Fehler beim Senden",
-        description: "Bitte versuchen Sie es später erneut oder kontaktieren Sie uns direkt.",
-        variant: "destructive",
-      });
+      if (!response.ok) throw new Error('Contact request failed');
+      setResult('success');
+      track('form_success', task);
+      form.reset();
+      setTask('');
+      started.current = false;
+    } catch {
+      setResult('error');
+      track('form_error', task);
     } finally {
-      setIsLoading(false);
+      locked.current = false;
+      setBusy(false);
     }
-  };
+  }
 
-  const inputClasses = "w-full px-4 py-3 rounded-lg border border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 text-[15px] transition-shadow focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent";
-
-  return (
-    <section id="contact-form" className="py-24 dark-canvas">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Reveal className="max-w-2xl mb-14">
-          <span className="eyebrow mb-4 !text-blue-400 before:!bg-blue-400">Kontakt</span>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white mb-4">
-            Lassen Sie uns Ihre Prozesse orchestrieren
-          </h2>
-          <p className="text-lg text-slate-300 leading-relaxed">
-            Beschreiben Sie uns Ihre Idee oder eine Herausforderung aus Ihrem Arbeitsalltag.
-            Wir melden uns bei Ihnen, um gemeinsam die nächsten Schritte zu klären.
-          </p>
-        </Reveal>
-
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          <Reveal>
-            <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-8 md:p-10">
-              <h3 className="text-xl font-semibold tracking-tight text-white mb-7">
-                So beginnt unsere Zusammenarbeit:
-              </h3>
-              <div className="space-y-5">
-                {[
-                  "Sie schildern Ihre Idee, Frage oder Herausforderung",
-                  "Wir melden uns persönlich bei Ihnen zurück",
-                  "Gemeinsam klären wir Ihren Bedarf und mögliche nächste Schritte",
-                  "Ihre Kontaktaufnahme ist unverbindlich"
-                ].map((item, index) => (
-                  <div key={index} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
-                    <span className="text-slate-200 text-[15px] leading-relaxed">{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </Reveal>
-
-          <Reveal delay={100}>
-            <div className="rounded-2xl bg-white p-8 md:p-10 shadow-lift">
-              <div className="mb-7">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 mb-4">
-                  <MessageSquare className="w-5 h-5 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-semibold tracking-tight text-slate-900 mb-1">
-                  Nehmen Sie Kontakt auf
-                </h3>
-                <p className="text-slate-500 text-sm">
-                  Ein paar Sätze reichen für den Anfang.
-                </p>
-              </div>
-
-              <form onSubmit={handleSubmit} className="space-y-3.5">
-                {/* Honeypot-Feld für Spam-Schutz - unsichtbar für normale Nutzer */}
-                <input
-                  type="text"
-                  name="honeypot"
-                  value={formData.honeypot}
-                  onChange={handleInputChange}
-                  style={{ display: 'none' }}
-                  tabIndex={-1}
-                  autoComplete="off"
-                />
-
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Ihr Name"
-                  value={formData.name}
-                  onChange={handleInputChange}
-                  required
-                  className={inputClasses}
-                />
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="E-Mail Adresse"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  required
-                  className={inputClasses}
-                />
-                <input
-                  type="text"
-                  name="company"
-                  placeholder="Unternehmen"
-                  value={formData.company}
-                  onChange={handleInputChange}
-                  className={inputClasses}
-                />
-                <textarea
-                  name="challenge"
-                  placeholder="Beschreiben Sie kurz Ihre größte Prozess-Herausforderung"
-                  value={formData.challenge}
-                  onChange={handleInputChange}
-                  rows={3}
-                  className={inputClasses}
-                ></textarea>
-
-                <Button
-                  type="submit"
-                  disabled={isLoading}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-lg h-12 text-base font-medium shadow-soft"
-                >
-                  {isLoading ? 'Wird gesendet...' : 'Anfrage senden'}
-                  {!isLoading && <ArrowRight className="ml-2 w-4 h-4" />}
-                </Button>
-              </form>
-
-              <p className="text-xs text-slate-400 text-center mt-5">
-                Digitalisierung darf einfach sein. Wir respektieren Ihre Privatsphäre.
-              </p>
-            </div>
-          </Reveal>
-        </div>
+  return <section id="contact-form" className="cp-contact">
+    <div className="po-wrap cp-contact-grid">
+      <div className="cp-contact-copy">
+        <p className="cp-eyebrow">Kostenloser Aufgaben-Check · 20–30 Minuten</p>
+        <h2>Welche Aufgabe würden<br className="cp-desktop" /> Sie gern abgeben?</h2>
+        <p>Eine wiederkehrende Büroaufgabe oder ein vielseitiger KI-Assistent für Ihr Team: Wir schauen uns Ihre Aufgaben, Programme und benötigten Datenzugriffe an.</p>
+        <ul className="cp-checks">
+          <li><Check size={18} /> Gemeinsam klären, was sich umsetzen lässt</li>
+          <li><Check size={18} /> Einen sinnvollen ersten Schritt finden</li>
+          <li><Check size={18} /> Kostenlos und unverbindlich</li>
+        </ul>
+        <div className="cp-person"><span className="cp-avatar" aria-hidden="true">DD</span><div><strong>Dominique Deutzmann</strong><span>Ihr Ansprechpartner und Entwickler · Krefeld</span></div></div>
+        <noscript><p>Für das Formular benötigen Sie JavaScript. Schreiben Sie mir alternativ eine E-Mail oder rufen Sie mich an.</p></noscript><div className="cp-direct"><a href="mailto:info@prozess-orchester.de"><Mail size={16} /> info@prozess-orchester.de</a><a href="tel:+4917645691439"><Phone size={16} /> +49 176 45691 439</a></div>
       </div>
-    </section>
-  );
+      <form className="cp-form" onSubmit={submit} onFocus={start} aria-label="Kostenlosen Aufgaben-Check anfragen" aria-busy={busy}>
+        <h3>Ein Beispiel aus Ihrem Alltag reicht.</h3>
+        <p>Ich melde mich persönlich zur Terminabstimmung.</p>
+        <input name="honeypot" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ display: 'none' }} />
+        <div className="cp-form-row">
+          <label htmlFor="check-name">Ihr Name <span>*</span><input id="check-name" name="name" autoComplete="name" required maxLength={150} /></label>
+          <label htmlFor="check-email">E-Mail-Adresse <span>*</span><input id="check-email" name="email" type="email" autoComplete="email" required maxLength={254} /></label>
+        </div>
+        <label htmlFor="check-company">Unternehmen <span>optional</span><input id="check-company" name="company" autoComplete="organization" maxLength={150} /></label>
+        <label htmlFor="check-task">Wobei wünschen Sie sich Unterstützung? <span>optional</span>
+          <select id="check-task" name="task" value={task} onChange={e => { setTask(e.target.value); setResult(null); }}>
+            <option value="">Aufgabe auswählen …</option>{taskOptions.map(([id, label]) => <option key={id} value={id}>{label}</option>)}
+          </select>
+        </label>
+        <label htmlFor="check-systems">Welche Programme nutzen Sie? <span>optional</span><input id="check-systems" name="systems" placeholder="Zum Beispiel Outlook, Excel, Ihr ERP …" maxLength={300} /></label>
+        <label htmlFor="check-challenge">Was möchten Sie erledigen? <span>optional</span><textarea id="check-challenge" name="challenge" placeholder="Zum Beispiel: Kundenbestellungen aus E-Mails in unsere Warenwirtschaft übernehmen." rows={3} maxLength={4000} /></label>
+        <p className="cp-privacy">Ihre Angaben verwende ich zur Bearbeitung Ihrer Anfrage. <a href="/datenschutz">Datenschutz</a> · * Pflichtfelder</p>
+        <button className="cp-button" type="submit" disabled={busy || !endpoint}>{busy ? 'Anfrage wird gesendet …' : 'Kostenlosen Aufgaben-Check anfragen'}<ArrowUpRight size={18} aria-hidden="true" /></button>
+        {result === 'success' && <div className="cp-form-result is-success" role="status"><Check size={20} /><p><strong>Ihre Anfrage ist angekommen.</strong> Ich melde mich persönlich bei Ihnen, um einen Termin abzustimmen.</p></div>}
+        {(result === 'error' || !endpoint) && <div className="cp-form-result" role="alert"><p>Ihre Anfrage konnte nicht bestätigt werden. Ihre Eingaben bleiben erhalten. Bitte versuchen Sie es erneut oder schreiben Sie direkt an <a href="mailto:info@prozess-orchester.de">info@prozess-orchester.de</a>.</p></div>}
+      </form>
+    </div>
+  </section>;
 };

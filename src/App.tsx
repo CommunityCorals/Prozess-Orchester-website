@@ -3,11 +3,11 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { SolutionPage, ProjectPage, ProjectsPage, AboutPage, ContactPage } from './pages/ContentPages';
 import { sitePages, projectPages } from './content/catalog';
 import Index from "./pages/Index";
-import { AIWorkplacePage } from './components/AIWorkplace';
+import { AssistantPage, PaperworkPage } from './components/CampaignPages';
 import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
 import Datenloeschung from "./pages/Datenloeschung";
@@ -23,7 +23,9 @@ const App = () => (
       <Sonner />
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/ki-arbeitsplatz" element={<AIWorkplacePage />} />
+          <Route path="/ki-assistent" element={<AssistantPage />} />
+          <Route path="/weniger-papierkram" element={<PaperworkPage />} />
+          <Route path="/ki-arbeitsplatz" element={<Navigate to="/ki-assistent" replace />} />
           <Route path="/impressum" element={<Impressum />} />
           <Route path="/datenschutz" element={<Datenschutz />} />
           <Route path="/datenloeschung" element={<Datenloeschung />} />
