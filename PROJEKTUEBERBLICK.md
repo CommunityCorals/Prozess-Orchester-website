@@ -46,6 +46,10 @@ Nächster Schritt: den gesicherten Git-Stand mit dem gewünschten Integrationsbr
 
 Überschrift auf /ki-assistent: „Ihr KI-Assistent. Für die Unterstützung Ihres Teams.“. Lokal fertig; Textaustausch, git diff --check und Produktionsbuild einschließlich Prerendering erfolgreich. Nicht veröffentlicht, keine Browserprüfung. Details und nächster Schritt im [aktuellen Nachtrag](/opt/n8n/deployments/prozess-orchester-20261014/DEPLOYMENT.md). Arbeitsbranch main auf 77566dac4f7842c9f09853c10e9deeaa77231e92; Anwendungstext bleibt dort uncommittiert, wird auf dem dokumentierten Git-Sicherungsbranch gesichert.
 
+## Aktuelle Farbgestaltung – 15.10.2026
+
+Blau führt jetzt Buttons, Links und Orientierung; Cyan unterstützt technische Elemente, Marineblau die dunklen Bereiche. Violett bleibt ergänzender Logoakzent. Gemeinsame Farben in src/site-design.css, Kampagnenfarben in src/campaign.css. Lokal fertig: Produktionsbuild, 75 Seiten-/Größenprüfungen sowie sechs gezielte Abschluss-/Fokusprüfungen bestanden; Screenshots gesichtet. Nicht veröffentlicht. Arbeitsbranch main auf 77566dac4f7842c9f09853c10e9deeaa77231e92 mit lokaler CSS-Arbeit; Git-Sicherungsbranch serverstand-2026-10-15. Der [maßgebliche Arbeitsnachtrag](/opt/n8n/deployments/prozess-orchester-20261014/DEPLOYMENT.md) enthält Entscheidungen, tatsächliche Prüfungen und nächsten Schritt. [Desktopvorschau](/opt/n8n/deployments/prozess-orchester-20261014/color-review-20261015/home-1440.png), [mobile Assistenzseite](/opt/n8n/deployments/prozess-orchester-20261014/color-review-20261015/ki-assistent-390.png).
+
 ## Pflege
 
 [Zentrale Pflegeanweisung](/opt/n8n/dokumentation/PFLEGEANWEISUNG.md) gilt nach jeder relevanten Arbeit. Bestehende oben genannte Arbeitsstandquellen bleiben maßgeblich; diesen Überblick nur als verdichteten Einstieg aktualisieren. Fehlt ein laufendes Arbeitsprotokoll, den datierten Fortsetzungsstand hier ergänzen, kein konkurrierendes Protokoll eröffnen.
