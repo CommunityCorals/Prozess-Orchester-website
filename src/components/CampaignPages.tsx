@@ -24,7 +24,7 @@ const heroCopy = {
   },
   assistant: {
     eyebrow: 'Ein KI-Assistent für Ihre Mitarbeitenden',
-    title: <>Ihr KI-Assistent.<br /><em>Für die Aufgaben<br />Ihres Teams.</em></>,
+    title: <>Ihr KI-Assistent.<br /><em>Für die Unterstützung<br />Ihres Teams.</em></>,
     text: 'Im Internet recherchieren, Unternehmensdaten auswerten und Aufgaben in Ihren Programmen erledigen. Ein vielseitiger Assistent, dem Ihre Mitarbeitenden sagen, was sie erreichen möchten.',
     image: 'ki-assistent', alt: 'Eine Mitarbeiterin und ihr digitaler Assistent bearbeiten gemeinsam Aufgaben am Laptop.',
   },

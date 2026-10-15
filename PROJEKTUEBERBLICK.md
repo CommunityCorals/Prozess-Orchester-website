@@ -42,6 +42,10 @@ Laut README und package.json bei vorhandenen Abhängigkeiten: `npm run dev`, `np
 
 Nächster Schritt: den gesicherten Git-Stand mit dem gewünschten Integrationsbranch abgleichen und erst für eine konkrete Änderung den aktuellen Build und die abgefangenen Formular-/Browserprüfungen wiederholen. Aktuelle Meta-Anzeigenfreigabe, heutige Websiteauslieferung und Google-Indexierung sind nicht verifiziert. Alte ungecommitete Deploymentkopien nicht versehentlich als aktuellen Quellstand verwenden.
 
+## Aktuelle Textkorrektur – 15.10.2026
+
+Überschrift auf /ki-assistent: „Ihr KI-Assistent. Für die Unterstützung Ihres Teams.“. Lokal fertig; Textaustausch, git diff --check und Produktionsbuild einschließlich Prerendering erfolgreich. Nicht veröffentlicht, keine Browserprüfung. Details und nächster Schritt im [aktuellen Nachtrag](/opt/n8n/deployments/prozess-orchester-20261014/DEPLOYMENT.md). Arbeitsbranch main auf 77566dac4f7842c9f09853c10e9deeaa77231e92; Anwendungstext bleibt dort uncommittiert, wird auf dem dokumentierten Git-Sicherungsbranch gesichert.
+
 ## Pflege
 
 [Zentrale Pflegeanweisung](/opt/n8n/dokumentation/PFLEGEANWEISUNG.md) gilt nach jeder relevanten Arbeit. Bestehende oben genannte Arbeitsstandquellen bleiben maßgeblich; diesen Überblick nur als verdichteten Einstieg aktualisieren. Fehlt ein laufendes Arbeitsprotokoll, den datierten Fortsetzungsstand hier ergänzen, kein konkurrierendes Protokoll eröffnen.
