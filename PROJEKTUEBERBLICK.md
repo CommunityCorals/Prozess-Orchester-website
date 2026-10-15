@@ -58,6 +58,10 @@ Blau führt jetzt Buttons, Links und Orientierung; Cyan unterstützt technische 
 
 Die Blau/Cyan-Farbwelt gilt jetzt auch für die Seitenköpfe und Abschlussbereiche sämtlicher Inhaltsunterseiten, Karten/Statushinweise sowie die Rechtstextseiten. **Veröffentlicht**, Anwendungscommit `27e79366d796cd41789ab4b028ff612c7d751f19`, Image subpages-20261015; vorherige Publikationsabschnitte sind historische Stände. Produktionsbuild, 75 lokale und acht Produktions-Browserprüfungen sowie 38 Origin-HTTPS-Dateivergleiche bestanden. Öffentliche CSS-/JS-Dateien bestätigt; automatisierte öffentliche HTML-Prüfung durch Cloudflare eingeschränkt. [Maßgeblicher Nachtrag mit Entscheidungen, Rückfall und nächstem Schritt](/opt/n8n/deployments/prozess-orchester-20261014/DEPLOYMENT.md).
 
+## Kostenloses Erstgespräch – 15.10.2026
+
+**Veröffentlicht:** „Aufgaben-Check“ auf allen Seiten durch „Kostenloses Erstgespräch“ ersetzt, einschließlich Navigation, Buttons, FAQ, Kontakt und Metadaten. Kontakt-/Abschlussüberschrift „Wo können wir Ihr Team entlasten?“ mit Erklärung zum 20–30-minütigen Gespräch. Anwendungscommit `842294c39253b08fe8e4cd8b47dba24cdb34ceec`, Image erstgespraech-20261015. Build, Textprüfung aller 26 vorgerenderten Seiten, 100 lokale und 8 Produktions-Browserprüfungen erfolgreich. Frühere Bezeichnungen in vorangegangenen Abschnitten sind historisch. [Maßgeblicher Nachtrag mit Veröffentlichung, Prüfgrenzen und nächstem Schritt](/opt/n8n/deployments/prozess-orchester-20261014/DEPLOYMENT.md).
+
 ## Pflege
 
 [Zentrale Pflegeanweisung](/opt/n8n/dokumentation/PFLEGEANWEISUNG.md) gilt nach jeder relevanten Arbeit. Bestehende oben genannte Arbeitsstandquellen bleiben maßgeblich; diesen Überblick nur als verdichteten Einstieg aktualisieren. Fehlt ein laufendes Arbeitsprotokoll, den datierten Fortsetzungsstand hier ergänzen, kein konkurrierendes Protokoll eröffnen.
