@@ -54,6 +54,10 @@ Blau führt jetzt Buttons, Links und Orientierung; Cyan unterstützt technische 
 
 **Veröffentlicht:** neue Blau/Cyan/Violett-Gestaltung und Überschrift „Ihr KI-Assistent. Für die Unterstützung Ihres Teams.“ auf https://prozess-orchester.de, Containerstart 2026-10-15T07:30:02.72257712Z. Ausgelieferter Anwendungsstand: Git-Sicherungscommit 6fe63bcb8647cd4effbd5fc9efaa0241fa7f7c3b; keine Integration in Remote-main. Nur Website-Service erneuert. 38 Origin-HTTPS-Dateivergleiche und sechs Browser-/Viewportprüfungen am laufenden Container erfolgreich. Cloudflare blockiert öffentliche automatisierte HTML-Prüfungen mit einer Bot-Schutzabfrage; öffentliche neue CSS-/JS-Dateien erreichbar. Frühere Abschnitte sind historische Arbeitsstände. Maßgeblich ist der [Veröffentlichungsnachtrag](/opt/n8n/deployments/prozess-orchester-20261014/DEPLOYMENT.md) mit Image, Rückfall, Prüfgrenzen und nächstem Schritt.
 
+## Unterseiten veröffentlicht – 15.10.2026
+
+Die Blau/Cyan-Farbwelt gilt jetzt auch für die Seitenköpfe und Abschlussbereiche sämtlicher Inhaltsunterseiten, Karten/Statushinweise sowie die Rechtstextseiten. **Veröffentlicht**, Anwendungscommit `27e79366d796cd41789ab4b028ff612c7d751f19`, Image subpages-20261015; vorherige Publikationsabschnitte sind historische Stände. Produktionsbuild, 75 lokale und acht Produktions-Browserprüfungen sowie 38 Origin-HTTPS-Dateivergleiche bestanden. Öffentliche CSS-/JS-Dateien bestätigt; automatisierte öffentliche HTML-Prüfung durch Cloudflare eingeschränkt. [Maßgeblicher Nachtrag mit Entscheidungen, Rückfall und nächstem Schritt](/opt/n8n/deployments/prozess-orchester-20261014/DEPLOYMENT.md).
+
 ## Pflege
 
 [Zentrale Pflegeanweisung](/opt/n8n/dokumentation/PFLEGEANWEISUNG.md) gilt nach jeder relevanten Arbeit. Bestehende oben genannte Arbeitsstandquellen bleiben maßgeblich; diesen Überblick nur als verdichteten Einstieg aktualisieren. Fehlt ein laufendes Arbeitsprotokoll, den datierten Fortsetzungsstand hier ergänzen, kein konkurrierendes Protokoll eröffnen.
