@@ -48,7 +48,7 @@ export const Hero = () => {
                 className="bg-blue-600 hover:bg-blue-700 text-white rounded-lg px-7 h-12 text-base font-medium shadow-lift"
                 onClick={scrollToContact}
               >
-                Unverbindliches Erstgespräch
+                Unverbindliches Kennenlerngespräch
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
               <Button

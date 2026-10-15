@@ -1,5 +1,5 @@
 const steps = [
-  ['Kostenloses Erstgespräch', 'Wir lernen uns kennen und besprechen Ihre Ziele.'],
+  ['Kostenloses Kennenlerngespräch', 'Wir lernen uns kennen und besprechen Ihre Ziele.'],
   ['Potenzialanalyse-Workshop', 'Wir identifizieren gemeinsam die größten Einsparpotenziale.'],
   ['Angebot & Beauftragung', 'Sie erhalten ein transparentes Angebot, das auf dem für Sie realisierbaren Wert basiert.'],
   ['Umsetzung & Testing', 'Wir entwickeln und testen Ihre maßgeschneiderte Automatisierung oder individuelle Softwarelösung.'],
