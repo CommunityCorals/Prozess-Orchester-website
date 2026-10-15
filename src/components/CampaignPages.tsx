@@ -5,7 +5,7 @@ import { chooseTask, track } from '@/lib/campaign';
 
 type Mode = 'home' | 'paper' | 'assistant';
 function Eyebrow({ children }: { children: ReactNode }) { return <p className="cp-eyebrow">{children}</p>; }
-function CheckLink({ task, children = 'Kostenlosen Aufgaben-Check anfragen', className = '' }: { task?: string; children?: ReactNode; className?: string }) {
+function CheckLink({ task, children = 'Kostenloses Erstgespräch', className = '' }: { task?: string; children?: ReactNode; className?: string }) {
   return <a href="#contact-form" className={'cp-button ' + className} onClick={() => { if (task) chooseTask(task); }}>{children}<ArrowUpRight size={18} aria-hidden="true" /></a>;
 }
 
@@ -196,7 +196,7 @@ function GettingStarted({ mode }: { mode: Mode }) {
   return <section className="cp-start"><div className="po-wrap cp-section">
     <div className="cp-section-heading"><div><Eyebrow>Persönlich eingerichtet. Passend zu Ihrem Betrieb.</Eyebrow><h2>Mit Ihren Aufgaben anfangen.<br />Mit Ihren Systemen arbeiten.</h2></div><p>{mode === 'assistant' ? 'Wir starten mit typischen Aufgaben Ihres Teams und binden die dafür benötigten Quellen und Werkzeuge an. Weitere Möglichkeiten lassen sich anschließend ergänzen.' : 'Ihre Programme müssen nicht pauschal ersetzt werden. Wir prüfen, welche Daten und Funktionen sich für Ihre Aufgaben verbinden lassen.'}</p></div>
     <ol className="cp-start-steps">
-      <li><span>01</span><h3>Aufgaben-Check</h3><p>In 20–30 Minuten besprechen wir Ihre Aufgaben und Programme. Kostenlos und unverbindlich.</p></li>
+      <li><span>01</span><h3>Kostenloses Erstgespräch</h3><p>In 20–30 Minuten besprechen wir Ihre täglichen Abläufe und schauen, wo Automatisierung oder ein KI-Assistent sinnvoll unterstützen kann.</p></li>
       <li><span>02</span><h3>Umfang & Angebot</h3><p>Sie erhalten einen konkreten Vorschlag zu Einrichtung, Anbindungen und Kosten. Laufende Dienste werden separat benannt.</p></li>
       <li><span>03</span><h3>Einrichten & ausprobieren</h3><p>Ich entwickle die Lösung und teste sie mit Ihrem Team. Datenzugriffe, Ergebnisse und Ausnahmen gehören dazu.</p></li>
     </ol>
@@ -207,7 +207,7 @@ function GettingStarted({ mode }: { mode: Mode }) {
 function Questions({ mode }: { mode: Mode }) {
   const shared = [
     { q: 'Funktioniert das mit unserem ERP oder unserer Warenwirtschaft?', a: 'Das prüfen wir anhand Ihrer Programme, Schnittstellen und Zugriffsrechte. Wir klären konkret, welche Daten gelesen und welche Vorgänge angelegt oder verändert werden können. Vorhandene Export- und Importmöglichkeiten können ebenfalls helfen.' },
-    { q: 'Was kostet die Umsetzung?', a: 'Der Aufgaben-Check ist kostenlos. Anschließend erhalten Sie einen Vorschlag mit konkretem Umfang und Kosten. Bei einem KI-Assistenten werden Einrichtung, Systemanbindungen und laufende Dienste beziehungsweise Nutzung getrennt betrachtet.' },
+    { q: 'Was kostet die Umsetzung?', a: 'Das Erstgespräch ist kostenlos. Anschließend erhalten Sie einen Vorschlag mit konkretem Umfang und Kosten. Bei einem KI-Assistenten werden Einrichtung, Systemanbindungen und laufende Dienste beziehungsweise Nutzung getrennt betrachtet.' },
     { q: 'Wer entscheidet, was geändert oder versendet wird?', a: 'Wir legen passende Rechte und Freigaben fest. Informationen recherchieren, einen Entwurf erstellen und einen Auftrag verbindlich übernehmen sind unterschiedliche Aktionen. Die Lösung erhält nur die dafür vorgesehenen Zugriffe.' },
   ];
   const first = mode === 'assistant'

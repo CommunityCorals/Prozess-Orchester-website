@@ -5,11 +5,11 @@ const projects = JSON.parse(await readFile('src/content/projects.json', 'utf8'))
 const origin = 'https://prozess-orchester.de';
 const fixed = [
  ['/', 'Automatisierung & KI-Assistenten für Ihr Team', 'E-Mails, Dokumente, Excel und ERP verbinden. Büroarbeit automatisieren und Mitarbeitenden einen flexiblen KI-Assistenten geben. Persönlich aus Krefeld.'],
- ['/weniger-papierkram','Weniger Papierkram. Mehr Zeit fürs Geschäft.','Bestellungen, Rechnungen und Excel-Daten automatisch verarbeiten und in ERP oder Warenwirtschaft übernehmen. Kostenlosen Aufgaben-Check anfragen.'],
+ ['/weniger-papierkram','Weniger Papierkram. Mehr Zeit fürs Geschäft.','Bestellungen, Rechnungen und Excel-Daten automatisch verarbeiten und in ERP oder Warenwirtschaft übernehmen. Kostenloses Erstgespräch.'],
  ['/ki-assistent','Ihr KI-Assistent für die Aufgaben Ihrer Mitarbeitenden','Im Internet recherchieren, Unternehmensdaten auswerten und in Ihren Programmen arbeiten. Ein flexibler KI-Assistent, passend für Ihr Team eingerichtet.'],
  ['/projekte','Projekte: Software & Automatisierung','Anonymisierte Praxisprojekte: Angebotssoftware, Versandkostenabgleich und betriebliche Handelsmodule. Konkrete Aufgaben und entwickelte Lösungen.'],
  ['/ueber-mich','Dominique Deutzmann – Ihr Ansprechpartner','Prozess-Orchester aus Krefeld: Ich entwickle Automatisierungen, individuelle Software und Schnittstellen für die tägliche Arbeit in KMU.'],
- ['/kontakt','Kostenlosen Aufgaben-Check anfragen','In 20–30 Minuten Aufgaben, Programme und einen sinnvollen Einstieg in Automatisierung oder einen flexiblen KI-Assistenten besprechen.'],
+ ['/kontakt','Kostenloses Erstgespräch','In 20–30 Minuten besprechen wir Ihre täglichen Abläufe und schauen, wo Automatisierung oder ein KI-Assistent sinnvoll unterstützen kann.'],
  ['/impressum','Impressum','Impressum und Anbieterangaben von Prozess-Orchester – Dominique Deutzmann.'],
  ['/datenschutz','Datenschutz','Informationen zur Verarbeitung personenbezogener Daten auf der Website und in der Meta-App von Prozess-Orchester.'],
  ['/datenloeschung','Datenlöschung für die Meta-App','Anleitung zur Löschung personenbezogener Daten im Zusammenhang mit der Meta-App von Prozess-Orchester.'],

@@ -111,11 +111,10 @@ export const CTA = () => {
         <Reveal className="max-w-2xl mb-14">
           <span className="eyebrow mb-4 !text-blue-400 before:!bg-blue-400">Kontakt</span>
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white mb-4">
-            Lassen Sie uns Ihre Prozesse orchestrieren
+            Wo können wir Ihr Team entlasten?
           </h2>
           <p className="text-lg text-slate-300 leading-relaxed">
-            Beschreiben Sie uns Ihre Idee oder eine Herausforderung aus Ihrem Arbeitsalltag.
-            Wir melden uns bei Ihnen, um gemeinsam die nächsten Schritte zu klären.
+            In 20–30 Minuten besprechen wir Ihre täglichen Abläufe und schauen, wo Automatisierung oder ein KI-Assistent sinnvoll unterstützen kann.
           </p>
         </Reveal>
 
@@ -148,7 +147,7 @@ export const CTA = () => {
                   <MessageSquare className="w-5 h-5 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-semibold tracking-tight text-slate-900 mb-1">
-                  Nehmen Sie Kontakt auf
+                  Kostenloses Erstgespräch anfragen
                 </h3>
                 <p className="text-slate-500 text-sm">
                   Ein paar Sätze reichen für den Anfang.

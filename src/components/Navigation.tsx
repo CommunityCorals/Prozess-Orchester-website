@@ -16,7 +16,7 @@ export const Navigation = () => {
     window.addEventListener('keydown', close);
     return () => window.removeEventListener('keydown', close);
   }, [open]);
-  const navigationLinks = <>{links.map(([label, id]) => <a key={id} href={id} onClick={() => setOpen(false)}>{label}</a>)}<a className="po-button" href="/kontakt#contact-form" onClick={() => setOpen(false)}>Aufgaben-Check <ArrowUpRight size={17} /></a></>;
+  const navigationLinks = <>{links.map(([label, id]) => <a key={id} href={id} onClick={() => setOpen(false)}>{label}</a>)}<a className="po-button" href="/kontakt#contact-form" onClick={() => setOpen(false)}>Kostenloses Erstgespräch <ArrowUpRight size={17} /></a></>;
   return <nav className="po-nav" aria-label="Hauptnavigation">
     <div className="po-wrap po-nav-inner">
       <a className="po-wordmark" href="/" aria-label="Prozess-Orchester – Startseite"><img src="/lovable-uploads/997bf14a-ebda-45e2-86d2-98cde192de8e.png" alt="" />Prozess-Orchester</a>
