@@ -13,17 +13,29 @@
   --po-muted: #59667b;
   --po-line: #dfe4ee;
   --po-paper: #f8f9fc;
+  --po-dark-glow: radial-gradient(ellipse at 8% 12%, #1d5ed62b, transparent 58%), radial-gradient(ellipse at 100% 100%, #7548db1f, transparent 55%);
+  --po-heading-gradient: linear-gradient(110deg, #84d7ff 0%, #87b9ff 52%, #c4adff 100%);
 }
-.po-home .dark-canvas {
+.po-home .dark-canvas, .po-page-intro, .po-next {
   background-color: var(--po-ink);
-  background-image: radial-gradient(ellipse at 12% 0%, #1d5ed62e, transparent 65%), radial-gradient(ellipse at 100% 100%, #7548db14, transparent 55%);
+  background-image: var(--po-dark-glow);
 }
 .po-home, .po-legal { font-family: Inter, sans-serif; }
 .po-page-intro h1, .po-home h2, .po-home h3 { font-family: Inter, sans-serif; }
 .po-home h2 { font-size: clamp(30px,3.1vw,44px); line-height: 1.16; letter-spacing: -.045em; }
 .po-section { padding-block: 82px; }
-.po-page-intro { background: #f8f9fc; padding-bottom: 65px; }
-.po-page-intro h1 { font-size: clamp(36px,4.5vw,62px); }
+.po-page-intro { color: white; padding-bottom: 65px; border-bottom-color: #263c5c; }
+.po-page-intro h1 {
+  font-size: clamp(36px,4.5vw,62px);
+  color: #a9dcff;
+  background-image: var(--po-heading-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.po-page-intro .po-kicker, .po-next .po-kicker { color: #84d7ff; }
+.po-page-intro .po-breadcrumb, .po-page-intro .po-small, .po-page-intro .po-page-lead { color: #c4d3e8; }
+.po-page-intro .po-breadcrumb:hover { color: white; }
 .po-page-lead { font-size: 17px; }
 .po-kicker { color: var(--po-blue); letter-spacing: .12em; margin-bottom: 18px; }
 .po-kicker > span { font-size: 0; width: 22px; height: 1px; background: currentColor; flex-shrink: 0; }
@@ -48,17 +60,22 @@
 .po-module-grid article, .po-reasons article, .po-project-scope aside { border: 1px solid var(--po-line); border-radius: 14px; background: #f8f9fc; padding: 28px; }
 .po-module-grid article:nth-child(even), .po-reasons article:nth-child(even) { background: var(--po-soft-blue); border-color: var(--po-accent-line); }
 .po-module-grid h3, .po-reasons h3 { font-size: 24px; }
+.po-module-grid article:nth-child(3n), .po-reasons article:nth-child(3n) { background: var(--po-soft-cyan); border-color: #cce4ec; }
+.po-project-scope aside { background: var(--po-soft-blue); border-color: var(--po-accent-line); }
 .po-proof { background: var(--po-soft-cyan); }
+.po-status { color: var(--po-cyan); }
+.po-evidence-note { border-color: var(--po-cyan); background: var(--po-soft-cyan); }
 .po-technical-table { border: 1px solid var(--po-line); border-radius: 14px; overflow: hidden; }
 .po-technical-table thead th { background: var(--po-soft-blue); }
 .po-comparison-row > div:last-child { background: var(--po-soft-cyan); }
 .po-before-after { border: 1px solid var(--po-line); border-radius: 14px; overflow: hidden; }
 .po-comparison-row:last-child { border-bottom: 0; }
-.po-legal main { background: #f8f9fc; }
+.po-legal main { background: linear-gradient(135deg, var(--po-soft-blue), var(--po-soft-cyan)); }
+.po-legal main h1 { color: var(--po-blue); }
 .po-legal main > div { border-radius: 14px; }
 .po-legal main a { color: var(--po-blue); }
-.po-home a:focus-visible, .po-legal a:focus-visible { outline: 3px solid var(--po-blue); outline-offset: 4px; }
-.po-home .cp-hero :focus-visible, .po-home .cp-start :focus-visible, .po-home .dark-canvas :focus-visible { outline: 3px solid var(--po-cyan-bright); outline-offset: 4px; }
+.po-home :focus-visible, .po-legal :focus-visible, .po-nav :focus-visible, .po-footer :focus-visible { outline: 3px solid var(--po-blue); outline-offset: 4px; }
+.po-home .po-page-intro :focus-visible, .po-home .po-next :focus-visible, .po-home .cp-hero :focus-visible, .po-home .cp-start :focus-visible, .po-home .dark-canvas :focus-visible { outline: 3px solid var(--po-cyan-bright); outline-offset: 4px; }
 @media(max-width:1100px) and (min-width:901px) {
   .po-content-card { padding: 24px; }
   .po-content-card h3 { font-size: 24px; }
@@ -73,4 +90,8 @@
 }
 @media(prefers-reduced-motion:reduce) {
   .po-content-card, .po-button { transition: none; }
+}
+
+@media(forced-colors:active) {
+  .po-page-intro h1 { background: none; color: CanvasText; -webkit-text-fill-color: currentColor; }
 }
