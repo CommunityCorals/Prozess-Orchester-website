@@ -1,0 +1,81 @@
+[
+  {
+    "slug": "angebotssoftware",
+    "title": "Vom Leistungskatalog zum versandfertigen Angebot.",
+    "label": "Individualsoftware · Baubranche",
+    "type": "Anonymisiertes Kundenprojekt",
+    "lead": "Eine tabletoptimierte Anwendung für ein Generalunternehmen verbindet Leistungen, Kalkulation, PDF-Erstellung und Angebotsverwaltung.",
+    "context": "Ein Angebot benötigt passende Leistungen, aktuelle Preise, optionale Zusatzpositionen und eine übersichtliche Darstellung für den Kunden. Die entwickelte Anwendung führt diese Aufgaben in einem zusammenhängenden Ablauf zusammen.",
+    "steps": [
+      "Kunden auswählen und Angaben verwalten",
+      "Leistungen und Zusatzpositionen aus dem Katalog zusammenstellen",
+      "Individuelles Angebot kalkulieren und prüfen",
+      "Professionelles PDF automatisch erzeugen",
+      "Angebot direkt per E-Mail versenden und Status verwalten"
+    ],
+    "result": "Die Anwendung unterstützt den Weg vom strukturierten Leistungskatalog bis zum versendeten Angebot. Kunden, Angebotsstatus und Bearbeitungsschritte können im selben System verwaltet werden.",
+    "boundary": "Die Darstellung beschreibt entwickelte Funktionen. Eine gemessene Zeitersparnis oder wirtschaftliche Erfolgskennzahl wird nicht behauptet. Die im Hintergrund vorgesehene Anbindung von Agenten und automatisierten Prozessen ist eine Ergänzung des Kernablaufs.",
+    "systems": [
+      "Tabletoptimierte Webanwendung",
+      "Leistungs- und Preiskatalog",
+      "PDF-Erzeugung",
+      "E-Mail-Versand"
+    ],
+    "related": [
+      "angebotserstellung-automatisieren",
+      "individualsoftware-kmu"
+    ]
+  },
+  {
+    "slug": "versandkostenabgleich",
+    "title": "Versandrechnung und Sendungsdaten zusammenbringen.",
+    "label": "Automatisierung · Versand",
+    "type": "Anonymisiertes Praxisprojekt",
+    "lead": "Eine Automatisierung gleicht Versandrechnungen mit Versanddaten ab und unterstützt die automatisierte Nachberechnung von Gewichtsüberschreitungen.",
+    "context": "Für die Nachberechnung einer Gewichtsüberschreitung müssen abgerechnete Angaben und die ursprünglichen Versanddaten zusammengeführt werden. Diese Zuordnung ist die Grundlage des beschriebenen Ablaufs.",
+    "steps": [
+      "Versandrechnung als Datengrundlage übernehmen",
+      "Abgerechnete Sendungen den Versanddaten zuordnen",
+      "Gewichtsüberschreitungen anhand der vorhandenen Angaben abgleichen",
+      "Daten für die automatisierte Nachberechnung aufbereiten"
+    ],
+    "result": "Rechnungs- und Versanddaten werden für die Nachberechnung zusammengeführt. Die Automatisierung übernimmt den beschriebenen Abgleich und die zugehörige Datenverarbeitung.",
+    "boundary": "Dienstleister, Kundendaten und konkrete Vertragsregeln bleiben anonym. Der genaue Freigabeweg und finanzielle Ergebnisse werden hier nicht dargestellt; für ein neues Projekt müssen diese Anforderungen individuell festgelegt werden.",
+    "systems": [
+      "Versandrechnungen",
+      "Versanddaten",
+      "Abgleich und Nachberechnung"
+    ],
+    "related": [
+      "versandprozesse-automatisieren",
+      "schnittstellen-api"
+    ]
+  },
+  {
+    "slug": "handelsprozesse",
+    "title": "Eigene Software für den Handelsalltag.",
+    "label": "Betriebliche Eigenentwicklung · E-Commerce",
+    "type": "Anonymisiertes Eigenprojekt",
+    "lead": "Rechnungserstellung, Lieferterminplanung, Versandbuchung und Support: Mehrere eigene Module unterstützen zusammenhängende Aufgaben in einem Handelsbetrieb.",
+    "context": "Bestelldaten werden für mehr als den Verkauf benötigt. Aus ihnen entstehen Rechnungen, Versandaufträge und Rückfragen im Kundenservice. Die beschriebenen Eigenentwicklungen unterstützen diese Aufgaben im betrieblichen Kontext.",
+    "steps": [
+      "Rechnungen auf Basis von Bestelldaten erstellen",
+      "Liefertermine im Versandplanungsmodul planen",
+      "Versandbuchungen über die vorgesehene Anbindung vorbereiten und ausführen",
+      "Supporttickets und Kundenkommunikation in einem eigenen Modul bearbeiten"
+    ],
+    "result": "Für Rechnungserstellung, Versandplanung und Support stehen auf die jeweiligen Aufgaben zugeschnittene Module zur Verfügung. Weitere Entwicklungen umfassen personalisierte Kundenerlebnisse und Meilensteine im Warenkorb.",
+    "boundary": "Dies ist ein eigener betrieblicher Anwendungsfall, keine externe Kundenreferenz. Die Beschreibung belegt Entwicklungsumfang und Prozesserfahrung; sie enthält keine gemessenen Einsparungswerte.",
+    "systems": [
+      "Bestelldaten",
+      "Rechnungsmodul",
+      "Versandplanung und Buchung",
+      "Supportmodul"
+    ],
+    "related": [
+      "individualsoftware-kmu",
+      "versandprozesse-automatisieren",
+      "schnittstellen-api"
+    ]
+  }
+]

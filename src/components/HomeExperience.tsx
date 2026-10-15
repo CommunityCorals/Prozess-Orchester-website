@@ -11,7 +11,7 @@ function SectionLabel({ number, children }: { number: string; children: React.Re
   return <div className="po-section-label"><span>{number}</span><span>{children}</span><i aria-hidden="true" /></div>;
 }
 
-function ProcessScore() {
+export function ProcessScore() {
   return <figure className="po-score">
     <svg viewBox="0 0 540 580" role="img" aria-labelledby="score-title score-desc">
       <title id="score-title">Von einzelnen Informationen zum gemeinsamen Auftrag</title>

@@ -1,31 +1,36 @@
+import { sitePages } from '@/content/catalog';
+import { ArrowUpRight } from 'lucide-react';
+import { ProcessExample, ProcessScore } from '@/components/HomeExperience';
+import { Layout, Label, Cards, ProjectCards, ProcessCheck, FAQList } from '@/components/Website';
 
-import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
-import { HomeHero, Services, ProcessExample, AboutAndApproach, Questions } from '@/components/HomeExperience';
-import { CTA } from '@/components/CTA';
-import { Navigation } from "@/components/Navigation";
-import { Footer } from "@/components/Footer";
-
-// Google reCAPTCHA Website-Schlüssel aus Umgebungsvariable
-const RECAPTCHA_SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY || '6Ld-OF4rAAAADRr-1tk6h93qylYk2fyECuaBuf9';
-
-const Index = () => {
-  return (
-    <div className="po-home">
-      <a className="po-skip-link" href="#main">Zum Inhalt</a>
-      <Navigation />
-      <main id="main">
-      <HomeHero />
-      <Services />
-      <ProcessExample />
-      <AboutAndApproach />
-      <Questions />
-      <GoogleReCaptchaProvider reCaptchaKey={RECAPTCHA_SITE_KEY} scriptProps={{ async: true, defer: true }}>
-        <CTA />
-      </GoogleReCaptchaProvider>
-      </main>
-      <Footer />
-    </div>
-  );
-};
-
-export default Index;
+export default function Index() {
+ return <Layout contact>
+  <section className="po-hero"><div className="po-hero-copy"><p className="po-eyebrow">Prozessautomatisierung · Individualsoftware · Schnittstellen für KMU</p><h1>Weniger Handarbeit.<br />Software, die Ihre<br className="po-desktop-break" /> Abläufe verbindet.</h1><p className="po-hero-description">Ich verbinde Ihre bestehenden Systeme, automatisiere wiederkehrende Aufgaben und entwickle individuelle Anwendungen, wenn Standardsoftware nicht ausreicht. Damit Ihr Team weniger Daten überträgt, Informationen sucht und Vorgänge nachbearbeitet.</p><div className="po-actions"><a className="po-button po-button-white" href="#contact-form">Kostenloses Erstgespräch anfragen <ArrowUpRight size={19}/></a><a className="po-text-link" href="/projekte">Projektbeispiele ansehen ↗</a></div><p className="po-hero-note">Dominique Deutzmann · Ihr Ansprechpartner von der Prozessaufnahme bis zur Umsetzung.</p></div><div className="po-hero-art"><div className="po-art-label"><span>PROZESS-ORCHESTER</span><span>IM ZUSAMMENSPIEL</span></div><ProcessScore/><div className="po-art-foot"><span>Bestehende Systeme. Ein gemeinsamer Ablauf.</span><span aria-hidden="true">↗</span></div></div></section>
+  <div className="po-service-strip po-wrap">{[['Prozesse automatisieren','prozessautomatisierung'],['Software entwickeln','individualsoftware-kmu'],['Systeme verbinden','schnittstellen-api']].map(([name,slug],i)=><a key={slug} href={'/'+slug}><span>0{i+1}</span>{name}<ArrowUpRight size={18}/></a>)}</div>
+  <section className="po-wrap po-section" id="probleme"><Label>Kommt Ihnen das bekannt vor?</Label><h2>Wo bleibt bei Ihnen<br />Arbeit liegen?</h2><div className="po-card-grid po-problem-grid">{[
+   ['Daten werden mehrfach eingegeben.','Was bereits in einem System steht, wird in ein anderes kopiert. Jede Übergabe braucht Zeit und bietet Raum für Fehler.','schnittstellen-api'],
+   ['Angebote und Dokumente entstehen von Hand.','Positionen suchen, Preise übernehmen, PDFs erzeugen: Der nächste Vorgang beginnt wieder mit derselben Arbeit.','angebotserstellung-automatisieren'],
+   ['E-Mail und Excel halten alles zusammen.','Informationen sind vorhanden, aber verteilt. Ein Vorgang läuft erst weiter, wenn jemand sucht, nachfragt und überträgt.','excel-prozesse-automatisieren']
+  ].map(([title,text,slug])=><a href={'/'+slug} className="po-content-card" key={slug}><h3>{title}</h3><p>{text}</p><span className="po-card-link">Passende Lösung ansehen <ArrowUpRight size={18}/></span></a>)}</div></section>
+  <section className="po-paper" id="leistungen"><div className="po-wrap po-section"><Label>Drei Wege zu einem besseren Ablauf</Label><div className="po-section-intro"><h2>Ihre Arbeit bestimmt<br />die Lösung.</h2><p>Eine Automatisierung, eine eigene Anwendung oder eine Schnittstelle: Wir wählen den Weg, der zu Ihren Abläufen und vorhandenen Systemen passt.</p></div><Cards slugs={['prozessautomatisierung','individualsoftware-kmu','schnittstellen-api']}/><div className="po-legacy-anchors" aria-hidden="true"><span id="software"/><span id="automatisierung"/><span id="integration"/></div></div></section>
+  <section className="po-wrap po-section" id="projekte"><Label>Einblicke in entwickelte Lösungen</Label><div className="po-section-intro"><h2>Aus echten Aufgaben<br />wird passende Software.</h2><p>Anonymisierte Projekte und ausdrücklich gekennzeichnete Eigenentwicklungen. Konkrete Funktionen zeigen, was umgesetzt wurde.</p></div><ProjectCards/></section>
+  <ProcessExample/>
+  <ProcessCheck/>
+  <section className="po-wrap po-section po-reading-grid" id="uber-uns"><div><Label>Ihr Ansprechpartner</Label><h2>Unternehmerisch gedacht.<br /><span className="po-blue">Persönlich umgesetzt.</span></h2></div><div className="po-prose"><p className="po-founder-name">Dominique Deutzmann</p><p className="po-kicker">Inhaber · Prozess-Orchester · Krefeld</p><p>Mein Hintergrund in E-Commerce, Logistik und Prozessmanagement prägt meinen Blick auf Software. Ich kenne gewachsene Abläufe aus eigener unternehmerischer Erfahrung und entwickle Lösungen für die Arbeit dazwischen.</p><p>Sie sprechen direkt mit mir: über den Prozess, die passende Technik und die konkrete Umsetzung.</p><a className="po-inline-link" href="/ueber-mich">Mehr über meine Arbeitsweise <ArrowUpRight size={18}/></a></div></section>
+  <section className="po-approach-section" id="zusammenarbeit"><div className="po-wrap po-section"><Label>So arbeiten wir zusammen</Label><h2>Ein klarer nächster Schritt.<br />Dann der nächste.</h2><ol className="po-approach-list">{[
+   ['Erstgespräch','Wir sprechen etwa 20 Minuten über Ihren Ablauf, Ihre Systeme und das gewünschte Ergebnis.','Kostenlos und unverbindlich.'],
+   ['Prozess klären','Im Prozess-Check prüfen wir einen Ablauf. Ist der Umfang bereits klar, kann direkt ein Projektangebot entstehen.','Eine nachvollziehbare Entscheidung.'],
+   ['Entwickeln und testen','Ich setze die vereinbarte Lösung um. Gemeinsam prüfen wir reale Vorgänge, Freigaben und Ausnahmefälle.','Ein abgegrenzter, nutzbarer Ablauf.'],
+   ['Einführen und begleiten','Wir klären Bedienung, Übergabe und Betrieb. Betreuung und Weiterentwicklung werden gesondert vereinbart.','Klare Zuständigkeiten im Alltag.']
+  ].map(([title,text,result],i)=><li key={title}><span className="po-approach-number">0{i+1}</span><h3>{title}</h3><p>{text}</p><span className="po-approach-result">{result}</span></li>)}</ol></div></section>
+  <section className="po-wrap po-section" id="loesungen"><Label>Bei welchem Prozess möchten Sie anfangen?</Label><h2>Konkrete Lösungen<br />für wiederkehrende Arbeit.</h2><div className="po-solution-links">{sitePages.filter(p=>p.kind==='Lösung').map(p=><a href={'/'+p.slug} key={p.slug}>{p.title}<ArrowUpRight size={19}/></a>)}</div><p className="po-small">Gezielte technische Unterstützung: <a href="/ki-automatisierung">KI-Automatisierung</a> und <a href="/n8n-agentur">n8n-Workflows</a>.</p></section>
+  <section className="po-paper"><div className="po-wrap po-section po-reading-grid" id="fragen"><div><Label>Gut zu wissen</Label><h2>Die ersten Fragen.</h2><span id="faq-section"/></div><FAQList items={[
+   {q:'Für welche Unternehmen ist Prozess-Orchester geeignet?',a:'Für kleine und mittlere Unternehmen mit wiederkehrenden Abläufen und vorhandenen digitalen Systemen. Entscheidend ist das konkrete Prozessproblem, nicht eine bestimmte Branche oder Mitarbeiterzahl.'},
+   {q:'Müssen wir unsere vorhandenen Programme ersetzen?',a:'Oft lassen sich vorhandene Systeme verbinden oder gezielt ergänzen. Zuerst prüfen wir deren Möglichkeiten und die tatsächlichen Anforderungen.'},
+   {q:'Brauchen wir dafür KI?',a:'Nicht unbedingt. Für klare Regeln und Datenübertragungen genügen häufig klassische Automatisierung und Schnittstellen. KI kann bei unstrukturierten Dokumenten oder Texten unterstützen.'},
+   {q:'Was kostet die Zusammenarbeit?',a:'Das Erstgespräch ist kostenlos. Der Prozess-Check für einen abgegrenzten Ablauf kostet 690 € netto. Für eine Umsetzung erhalten Sie nach Klärung des Umfangs ein konkretes Angebot.'},
+   {q:'Wie wird mit unseren Daten umgegangen?',a:'Wir klären vor der Umsetzung, welche Daten benötigt werden, wer Zugriff braucht und welche Dienste beteiligt sind. Hosting, Datenwege und erforderliche Vereinbarungen werden passend zum Projekt festgelegt.'},
+   {q:'Was passiert nach der Einführung?',a:'Übergabe, Zugänge, Dokumentation und Verantwortlichkeiten stimmen wir vorab ab. Unterstützung bei Betrieb, Wartung und Weiterentwicklung kann gesondert vereinbart werden.'}
+  ]}/></div></section>
+ </Layout>;
+}
